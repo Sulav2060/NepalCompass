@@ -105,42 +105,53 @@ const TitleSection = () => {
 
   return (
     <>
-      <Menu
-        style={{ width: 256 }}
-        defaultSelectedKeys={["1"]}
-        defaultOpenKeys={["sub1"]}
-        mode={mode}
-        theme={theme}
-      >
-        {items.map((item) => (
-          <Menu.SubMenu key={item.key} icon={item.icon} title={item.label}>
-            {item.children &&
-              item.children.map((child) =>
-                child.children ? (
-                  <Menu.SubMenu key={child.key} title={child.label}>
-                    {child.children.map((subChild) =>
-                      subChild.children ? (
-                        <Menu.SubMenu key={subChild.key} title={subChild.label}>
-                          {subChild.children.map((subSubChild) => (
-                            <Menu.Item key={subSubChild.key}>
-                              {subSubChild.label}
-                            </Menu.Item>
-                          ))}
-                        </Menu.SubMenu>
-                      ) : (
-                        <Menu.Item key={subChild.key}>
-                          {subChild.label}
-                        </Menu.Item>
-                      )
-                    )}
-                  </Menu.SubMenu>
-                ) : (
-                  <Menu.Item key={child.key}>{child.label}</Menu.Item>
-                )
-              )}
-          </Menu.SubMenu>
-        ))}
-      </Menu>
+      <div className=" overflow-auto h-[90vh] sticky">
+        <Menu
+          style={{
+            width: 256,
+            position: "fixed",
+            left: "0rem",
+            top: "10vh",
+            bottom: 0,
+          }}
+          defaultSelectedKeys={["1"]}
+          defaultOpenKeys={["sub1"]}
+          mode={mode}
+          theme={theme}
+        >
+          {items.map((item) => (
+            <Menu.SubMenu key={item.key} icon={item.icon} title={item.label}>
+              {item.children &&
+                item.children.map((child) =>
+                  child.children ? (
+                    <Menu.SubMenu key={child.key} title={child.label}>
+                      {child.children.map((subChild) =>
+                        subChild.children ? (
+                          <Menu.SubMenu
+                            key={subChild.key}
+                            title={subChild.label}
+                          >
+                            {subChild.children.map((subSubChild) => (
+                              <Menu.Item key={subSubChild.key}>
+                                {subSubChild.label}
+                              </Menu.Item>
+                            ))}
+                          </Menu.SubMenu>
+                        ) : (
+                          <Menu.Item key={subChild.key}>
+                            {subChild.label}
+                          </Menu.Item>
+                        )
+                      )}
+                    </Menu.SubMenu>
+                  ) : (
+                    <Menu.Item key={child.key}>{child.label}</Menu.Item>
+                  )
+                )}
+            </Menu.SubMenu>
+          ))}
+        </Menu>
+      </div>
     </>
   );
 };

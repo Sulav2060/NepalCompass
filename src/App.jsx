@@ -1,33 +1,25 @@
 import { useState } from "react";
-
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TitleSection from "./components/TitleSection";
 import ContentSection from "./components/ContentSection";
-import BodySection from "./components/BodySection";
-
-
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
+    <div className="h-screen flex flex-col">
       <Navbar />
-      <div className="grid grid-cols-12">
-        <div className=" col-span-2">
+      <div className="flex flex-1">
+        <div className="w-2/12 overflow-hidden">
           <TitleSection />
         </div>
-        <div className=" col-span-8 scrollable-section">
-          <BodySection />
-        </div>
-        <div className=" col-span-2">
+        <div className="w-10/12">
           <ContentSection />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
 export default App;
-

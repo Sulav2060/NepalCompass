@@ -2,24 +2,25 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <>
-      <div className="flex justify-between font-semibold text-2xl p-6 ">
-        <div className="flex gap-14">
-          <button>NepalCompass</button>
-          <div className="flex gap-3 font-thin text-blue-500">
+    <div className="fixed top-0 z-10 w-full bg-white shadow-md">
+      <div className="container mx-auto flex justify-between items-center h-16 px-6">
+        <div className="flex items-center">
+          <button className="text-xl font-semibold text-blue-600">
+            NepalCompass
+          </button>
+          <div className="ml-6 space-x-3 text-blue-500">
             <a href="#">Sulav</a>
             <a href="#">Suraj</a>
             <a href="#">GithubLink</a>
             <a href="#">ToBeDetermined</a>
           </div>
         </div>
-
-        <div className="flex gap-5">
-          <button>Theme</button>
+        <div>
+          <button className="mr-4">Theme</button>
           <button>Login</button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
