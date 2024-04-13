@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-      <div className="flex justify-between font-bold text-2xl p-6 ">
+      <div className="flex justify-between font-semibold text-2xl p-6 ">
         <div className="flex gap-14">
           <button>NepalCompass</button>
           <div className="flex gap-3 font-thin text-blue-500">

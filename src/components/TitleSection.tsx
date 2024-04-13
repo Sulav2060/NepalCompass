@@ -1,58 +1,8 @@
 import React, { useState } from "react";
-import {
-  AppstoreOutlined,
-  CalendarOutlined,
-  LinkOutlined,
-  MailOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
-import { Divider, Menu, Switch } from "antd";
-import type { GetProp, MenuProps } from "antd";
+import { Menu, MenuTheme } from "antd";
+import { MailOutlined, AppstoreOutlined } from "@ant-design/icons";
 
-type MenuTheme = GetProp<MenuProps, "theme">;
-type MenuItem = GetProp<MenuProps, "items">[number];
-
-function getItem(
-  label: React.ReactNode,
-  key?: React.Key | null,
-  icon?: React.ReactNode,
-  children?: MenuItem[]
-): MenuItem {
-  return {
-    key,
-    icon,
-    children,
-    label,
-  } as MenuItem;
-}
-
-const items: MenuItem[] = [
-  getItem("Navigation One", "1", <MailOutlined />),
-  getItem("Navigation Two", "2", <CalendarOutlined />),
-  getItem("Navigation Two", "sub1", <AppstoreOutlined />, [
-    getItem("Option 3", "3"),
-    getItem("Option 4", "4"),
-    getItem("Submenu", "sub1-2", null, [
-      getItem("Option 5", "5"),
-      getItem("Option 6", "6"),
-    ]),
-  ]),
-  getItem("Navigation Three", "sub2", <SettingOutlined />, [
-    getItem("Option 7", "7"),
-    getItem("Option 8", "8"),
-    getItem("Option 9", "9"),
-    getItem("Option 10", "10"),
-  ]),
-  getItem(
-    <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-      Ant Design
-    </a>,
-    "link",
-    <LinkOutlined />
-  ),
-];
-
-const TitleSection: React.FC = () => {
+const TitleSection = () => {
   const [mode, setMode] = useState<"vertical" | "inline">("inline");
   const [theme, setTheme] = useState<MenuTheme>("light");
 
@@ -64,6 +14,95 @@ const TitleSection: React.FC = () => {
     setTheme(value ? "dark" : "light");
   };
 
+  // Define menu items with icons and keys
+  const items = [
+    {
+      label: "Tourism",
+      key: "tourism",
+      icon: <MailOutlined />,
+      children: [
+        {
+          label: "Airport",
+          key: "airport",
+          children: [
+            { label: "On Arrival Visa", key: "on_arrival_visa" },
+            { label: "Currency Exchange", key: "currency_exchange" },
+            { label: "SIM Card", key: "sim_card" },
+            { label: "Travel to Hotel", key: "travel_hotel" },
+          ],
+        },
+        {
+          label: "Cities",
+          key: "cities",
+          children: [
+            {
+              label: "Accommodation",
+              key: "accommodation",
+              children: [
+                { label: "Hotels", key: "hotels" },
+                { label: "Hostels", key: "hostels" },
+              ],
+            },
+            { label: "Travel Medium", key: "travel_medium" },
+            {
+              label: "Food",
+              key: "food",
+              children: [
+                { label: "Local Cuisine", key: "local_cuisine" },
+                { label: "Continental Cuisine", key: "continental_cuisine" },
+              ],
+            },
+            {
+              label: "Things to Do",
+              key: "things_to_do",
+              children: [
+                {
+                  label: "Travel Agency or Self-Guided Options (mention Garni)",
+                  key: "agency_options",
+                },
+                {
+                  label: "Traditional Activities",
+                  key: "traditional_activities",
+                },
+                {
+                  label: "Adventure Activities",
+                  key: "adventure_activities",
+                  children: [
+                    { label: "Treks", key: "treks" },
+                    { label: "Adrenaline Sports", key: "adrenaline_sports" },
+                  ],
+                },
+                {
+                  label: "Places to Visit",
+                  key: "places_to_visit",
+                  children: [
+                    {
+                      label: "Natural Attractions",
+                      key: "natural_attractions",
+                    },
+                    { label: "Cultural Sites", key: "cultural_sites" },
+                    { label: "Hotspots", key: "hotspots" },
+                  ],
+                },
+              ],
+            },
+            { label: "Tours and Travels", key: "tours_and_travels" },
+          ],
+        },
+      ],
+    },
+    {
+      label: "Useful Links",
+      key: "useful_links",
+      icon: <AppstoreOutlined />,
+      children: [
+        { label: "Link 1", key: "link_1" },
+        { label: "Link 2", key: "link_2" },
+        // Add more links as needed
+      ],
+    },
+  ];
+
   return (
     <>
       <Menu
@@ -72,10 +111,37 @@ const TitleSection: React.FC = () => {
         defaultOpenKeys={["sub1"]}
         mode={mode}
         theme={theme}
-        items={items}
-      />
+      >
+        {items.map((item) => (
+          <Menu.SubMenu key={item.key} icon={item.icon} title={item.label}>
+            {item.children &&
+              item.children.map((child) =>
+                child.children ? (
+                  <Menu.SubMenu key={child.key} title={child.label}>
+                    {child.children.map((subChild) =>
+                      subChild.children ? (
+                        <Menu.SubMenu key={subChild.key} title={subChild.label}>
+                          {subChild.children.map((subSubChild) => (
+                            <Menu.Item key={subSubChild.key}>
+                              {subSubChild.label}
+                            </Menu.Item>
+                          ))}
+                        </Menu.SubMenu>
+                      ) : (
+                        <Menu.Item key={subChild.key}>
+                          {subChild.label}
+                        </Menu.Item>
+                      )
+                    )}
+                  </Menu.SubMenu>
+                ) : (
+                  <Menu.Item key={child.key}>{child.label}</Menu.Item>
+                )
+              )}
+          </Menu.SubMenu>
+        ))}
+      </Menu>
     </>
   );
 };
-
 export default TitleSection;
