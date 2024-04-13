@@ -1,0 +1,7 @@
+.scrollable-section {
+    height: 80vh;
+    overflow-y: scroll;
+    position: sticky;
+    top: 0;
+  }
+  

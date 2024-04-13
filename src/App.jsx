@@ -6,6 +6,8 @@ import TitleSection from "./components/TitleSection";
 import ContentSection from "./components/ContentSection";
 import BodySection from "./components/BodySection";
 
+
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -16,7 +18,7 @@ function App() {
         <div className=" col-span-2">
           <TitleSection />
         </div>
-        <div className=" col-span-8">
+        <div className=" col-span-8 scrollable-section">
           <BodySection />
         </div>
         <div className=" col-span-2">
@@ -28,3 +30,4 @@ function App() {
 }
 
 export default App;
+
