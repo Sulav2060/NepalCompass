@@ -1,5 +1,9 @@
 import React from "react";
 import { Row, Col, Anchor, Typography, Divider, Table } from "antd";
+import RightSidebar from "../components/RightSidebar";
+import LeftSidebar from "../components/LeftSidebar";
+import Contents from "../components/Contents";
+import Navbar from "../components/Navbar";
 
 const { Link } = Anchor;
 const { Title, Paragraph } = Typography;
@@ -24,102 +28,103 @@ const Airport = () => {
   ];
 
   return (
-    <div className="h-[90vh] relative">
-      <Row>
-        <Col span={16}>
-          <div className="h-[10vh]"></div>
-          <div className="overflow-auto">
-            <Title level={2}>Airport</Title>
+    <div>
+      <Navbar />
+      <div className="flex mt-16">
+        <div className="w-1/5">
+          <LeftSidebar />
+        </div>
 
-            <Paragraph id="visa">
-              <Title level={3}>On Arrival Visa</Title>
-              <Paragraph>
-                During your first arrival in Nepal, you have Visa on Arrival
-                from most countries, meaning you can come here and obtain a
-                visa. If you wish to obtain a visa from your own home country,
-                it will cost you extra. For countries like India, a visa isn’t
-                required. And for SAARC countries, the first entry is free of
-                cost within a year.
-              </Paragraph>
-              <Paragraph>
-                <strong>Our Recommendation:</strong> Fill the form online and
-                come and pay here in Nepal which will cost you:
-              </Paragraph>
-              <Table
-                dataSource={visaDataSource}
-                columns={visaColumns}
-                pagination={false}
-              />
-              <Paragraph>
-                <strong>Note:</strong> Indian currency isn’t accepted at the
-                visa pay counter.
-              </Paragraph>
-            </Paragraph>
+        <div className="mx-20 w-3/5">
+          <Row>
+            <Col>
+              <div className="h-[10vh]"></div>
+              <div className="overflow-hidden">
+                <Title level={2}>Airport</Title>
 
-            <Divider />
+                <Paragraph id="visa">
+                  <Title level={3}>On Arrival Visa</Title>
+                  <Paragraph>
+                    During your first arrival in Nepal, you have Visa on Arrival
+                    from most countries, meaning you can come here and obtain a
+                    visa. If you wish to obtain a visa from your own home
+                    country, it will cost you extra. For countries like India, a
+                    visa isn’t required. And for SAARC countries, the first
+                    entry is free of cost within a year.
+                  </Paragraph>
+                  <Paragraph>
+                    <strong>Our Recommendation:</strong> Fill the form online
+                    and come and pay here in Nepal which will cost you:
+                  </Paragraph>
+                  <Table
+                    dataSource={visaDataSource}
+                    columns={visaColumns}
+                    pagination={false}
+                  />
+                  <Paragraph>
+                    <strong>Note:</strong> Indian currency isn’t accepted at the
+                    visa pay counter.
+                  </Paragraph>
+                </Paragraph>
 
-            <Paragraph id="currency">
-              <Title level={3}>Currency Exchange</Title>
-              <Paragraph>
-                For currency exchange, you can find it within the airport or for
-                better exchange rates, you can go to any ATM on the streets of
-                the capital, as it consists of a high density of ATMs throughout
-                the places.
-              </Paragraph>
-            </Paragraph>
+                <Divider />
 
-            <Divider />
+                <Paragraph id="currency">
+                  <Title level={3}>Currency Exchange</Title>
+                  <Paragraph>
+                    For currency exchange, you can find it within the airport or
+                    for better exchange rates, you can go to any ATM on the
+                    streets of the capital, as it consists of a high density of
+                    ATMs throughout the places.
+                  </Paragraph>
+                </Paragraph>
 
-            <Paragraph id="sim">
-              <Title level={3}>SIM Card</Title>
-              <Paragraph>
-                For a SIM card, if you only plan to travel between cities like
-                KTM and PKR, then Smart Cell will cost you the least. If your
-                plan is to hike and go to mountains, then you can take either
-                NCELL or NTC as both have large coverage. You can also directly
-                use an eSIM booked from any app from your home country, but it
-                will be a lot more expensive compared to a local SIM.
-              </Paragraph>
-              <Paragraph>
-                <strong>Requirements:</strong>
-                <br />
-                - Passport size photo (if you don’t have, don’t worry, the
-                airport will set you up for a minimal charge)
-                <br />- 100 NRS for a SIM outside the airport itself, and
-                additional data costs may vary according to the provider. (All
-                the rates you see at the airport are for data and don’t include
-                the SIM.)
-              </Paragraph>
-            </Paragraph>
+                <Divider />
 
-            <Divider />
+                <Paragraph id="sim">
+                  <Title level={3}>SIM Card</Title>
+                  <Paragraph>
+                    For a SIM card, if you only plan to travel between cities
+                    like KTM and PKR, then Smart Cell will cost you the least.
+                    If your plan is to hike and go to mountains, then you can
+                    take either NCELL or NTC as both have large coverage. You
+                    can also directly use an eSIM booked from any app from your
+                    home country, but it will be a lot more expensive compared
+                    to a local SIM.
+                  </Paragraph>
+                  <Paragraph>
+                    <strong>Requirements:</strong>
+                    <br />
+                    - Passport size photo (if you don’t have, don’t worry, the
+                    airport will set you up for a minimal charge)
+                    <br />- 100 NRS for a SIM outside the airport itself, and
+                    additional data costs may vary according to the provider.
+                    (All the rates you see at the airport are for data and don’t
+                    include the SIM.)
+                  </Paragraph>
+                </Paragraph>
 
-            <Paragraph id="recommendation">
-              <Title level={3}>Our Recommendation</Title>
-              <div className="border border-gray-300 rounded-md p-4 bg-gray-100">
-                <Title level={4} style={{ marginBottom: "8px" }}>
-                  NCELL SIM Card
-                </Title>
-                <Paragraph style={{ marginBottom: 0 }}>
-                  For faster data compared to NTC.
+                <Divider />
+
+                <Paragraph id="recommendation">
+                  <Title level={3}>Our Recommendation</Title>
+                  <div className="border border-gray-300 rounded-md p-4 bg-gray-100">
+                    <Title level={4} style={{ marginBottom: "8px" }}>
+                      NCELL SIM Card
+                    </Title>
+                    <Paragraph style={{ marginBottom: 0 }}>
+                      For faster data compared to NTC.
+                    </Paragraph>
+                  </div>
                 </Paragraph>
               </div>
-            </Paragraph>
+            </Col>
+          </Row>
+        </div>
+        <div className="w-4/5">
+            <RightSidebar navigationItems={navigationItems} />
           </div>
-        </Col>
-
-        <Col
-          span={8}
-          className="overflow-auto"
-          style={{ position: "fixed", right: "3rem", top: "10vh", bottom: 0 }}
-        >
-          <Anchor targetOffset={20}>
-            {navigationItems.map((item) => (
-              <Link key={item.id} href={`#${item.id}`} title={item.title} />
-            ))}
-          </Anchor>
-        </Col>
-      </Row>
+      </div>
     </div>
   );
 };
