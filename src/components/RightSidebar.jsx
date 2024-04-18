@@ -10,7 +10,7 @@ const RightSidebar = ({ navigationItems }) => {
   }
 
   return (
-    <div className="fixed right-0 overflow-y-auto">
+    <div className="fixed px-20 overflow-y-auto">
       <Anchor affix={true}>
         {/* <Link href="#top" title="Top" /> */}
         {navigationItems.map((item) => (

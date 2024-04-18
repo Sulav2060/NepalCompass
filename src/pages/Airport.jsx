@@ -22,23 +22,24 @@ const visaColumns = [
 const Airport = () => {
   const navigationItems = [
     { id: "visa", title: "On Arrival Visa" },
+    { id: "visa2", title: "On Arrival Visa" },
+
     { id: "currency", title: "Currency Exchange" },
     { id: "sim", title: "SIM Card" },
     { id: "recommendation", title: "Our Recommendation" },
   ];
 
   return (
-    <div>
+    <div className="flex flex-col h-screen ">
       <Navbar />
-      <div className="flex mt-16">
-        <div className="w-1/5">
+      <div className="flex mt-20">
+        <div className="w-1/6 ">
           <LeftSidebar />
         </div>
 
-        <div className="mx-20 w-3/5">
+        <div className="w-3/5 ">
           <Row>
             <Col>
-              <div className="h-[10vh]"></div>
               <div className="overflow-hidden">
                 <Title level={2}>Airport</Title>
 
@@ -68,6 +69,31 @@ const Airport = () => {
                 </Paragraph>
 
                 <Divider />
+                <Paragraph id="visa2">
+                  <Title level={3}>On Arrival Visa</Title>
+                  <Paragraph>
+                    During your first arrival in Nepal, you have Visa on Arrival
+                    from most countries, meaning you can come here and obtain a
+                    visa. If you wish to obtain a visa from your own home
+                    country, it will cost you extra. For countries like India, a
+                    visa isn’t required. And for SAARC countries, the first
+                    entry is free of cost within a year.
+                  </Paragraph>
+                  <Paragraph>
+                    <strong>Our Recommendation:</strong> Fill the form online
+                    and come and pay here in Nepal which will cost you:
+                  </Paragraph>
+                  <Table
+                    dataSource={visaDataSource}
+                    columns={visaColumns}
+                    pagination={false}
+                  />
+                  <Paragraph>
+                    <strong>Note:</strong> Indian currency isn’t accepted at the
+                    visa pay counter.
+                  </Paragraph>
+                </Paragraph>
+                <Divider/>
 
                 <Paragraph id="currency">
                   <Title level={3}>Currency Exchange</Title>
@@ -121,9 +147,9 @@ const Airport = () => {
             </Col>
           </Row>
         </div>
-        <div className="w-4/5">
-            <RightSidebar navigationItems={navigationItems} />
-          </div>
+        <div className="w-1/5">
+          <RightSidebar navigationItems={navigationItems} />
+        </div>
       </div>
     </div>
   );
