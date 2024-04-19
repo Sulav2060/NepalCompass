@@ -1,0 +1,52 @@
+import React, { useState, useEffect } from "react";
+
+const RightSidebar = ({ navigationItems }) => {
+  const [activeItems, setActiveItems] = useState([]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const visibleItems = [];
+
+      navigationItems.forEach((item) => {
+        const element = document.getElementById(item.id);
+        if (element) {
+          const { top, bottom } = element.getBoundingClientRect();
+          if (top >= 0 && bottom <= window.innerHeight) {
+            visibleItems.push(item.id);
+          }
+        }
+      });
+
+      setActiveItems(visibleItems);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [navigationItems]);
+
+  return (
+    <div className="fixed top-10vh right-0 h-full bg-white w-48 overflow-y-auto shadow">
+      <ul>
+        {navigationItems.map((item) => (
+          <li
+            key={item.id}
+            id={item.id}
+            className={`py-2 pl-4 border-l-4 ${
+              activeItems.includes(item.id)
+                ? "border-blue-500 text-blue-500"
+                : "border-transparent text-gray-700 hover:bg-gray-100"
+            }`}
+          >
+            <a href={`#${item.id}`} className="sidebar-link">
+              {item.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default RightSidebar;
