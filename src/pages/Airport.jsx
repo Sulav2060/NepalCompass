@@ -2,8 +2,8 @@ import React from "react";
 import { Row, Col, Anchor, Typography, Divider, Table } from "antd";
 import RightSidebar from "../components/RightSidebar";
 import LeftSidebar from "../components/LeftSidebar";
-import Contents from "../components/Contents";
 import Navbar from "../components/Navbar";
+import { StarOutlined } from "@ant-design/icons";
 
 const { Link } = Anchor;
 const { Title, Paragraph } = Typography;
@@ -22,11 +22,10 @@ const visaColumns = [
 const Airport = () => {
   const navigationItems = [
     { id: "visa", title: "On Arrival Visa" },
-    { id: "visa2", title: "On Arrival Visa" },
 
     { id: "currency", title: "Currency Exchange" },
     { id: "sim", title: "SIM Card" },
-    { id: "recommendation", title: "Our Recommendation" },
+    { id: "transport", title: "Transport" },
   ];
 
   return (
@@ -46,22 +45,24 @@ const Airport = () => {
                 <Paragraph id="visa">
                   <Title level={3}>On Arrival Visa</Title>
                   <Paragraph>
-                    During your first arrival in Nepal, you have Visa on Arrival
-                    from most countries, meaning you can come here and obtain a
-                    visa. If you wish to obtain a visa from your own home
-                    country, it will cost you extra. For countries like India, a
-                    visa isn’t required. And for SAARC countries, the first
-                    entry is free of cost within a year.
+                    <ul>
+                      <li>
+                        Visa-on-arrival facility available for most
+                        nationalities.
+                      </li>
+                      <li>Visa fees:</li>
+                    </ul>
+                    <Table
+                      dataSource={visaDataSource}
+                      columns={visaColumns}
+                      pagination={false}
+                    />
                   </Paragraph>
                   <Paragraph>
                     <strong>Our Recommendation:</strong> Fill the form online
                     and come and pay here in Nepal which will cost you:
                   </Paragraph>
-                  <Table
-                    dataSource={visaDataSource}
-                    columns={visaColumns}
-                    pagination={false}
-                  />
+
                   <Paragraph>
                     <strong>Note:</strong> Indian currency isn’t accepted at the
                     visa pay counter.
@@ -69,79 +70,80 @@ const Airport = () => {
                 </Paragraph>
 
                 <Divider />
-                <Paragraph id="visa2">
-                  <Title level={3}>On Arrival Visa</Title>
-                  <Paragraph>
-                    During your first arrival in Nepal, you have Visa on Arrival
-                    from most countries, meaning you can come here and obtain a
-                    visa. If you wish to obtain a visa from your own home
-                    country, it will cost you extra. For countries like India, a
-                    visa isn’t required. And for SAARC countries, the first
-                    entry is free of cost within a year.
-                  </Paragraph>
-                  <Paragraph>
-                    <strong>Our Recommendation:</strong> Fill the form online
-                    and come and pay here in Nepal which will cost you:
-                  </Paragraph>
-                  <Table
-                    dataSource={visaDataSource}
-                    columns={visaColumns}
-                    pagination={false}
-                  />
-                  <Paragraph>
-                    <strong>Note:</strong> Indian currency isn’t accepted at the
-                    visa pay counter.
-                  </Paragraph>
-                </Paragraph>
-                <Divider/>
 
                 <Paragraph id="currency">
                   <Title level={3}>Currency Exchange</Title>
-                  <Paragraph>
-                    For currency exchange, you can find it within the airport or
-                    for better exchange rates, you can go to any ATM on the
-                    streets of the capital, as it consists of a high density of
-                    ATMs throughout the places.
-                  </Paragraph>
+                  <ul>
+                    <li>Currency exchange available at airport.</li>
+                    <li>Better rates at ATMs in capital.</li>
+                  </ul>
                 </Paragraph>
 
                 <Divider />
 
                 <Paragraph id="sim">
                   <Title level={3}>SIM Card</Title>
+                  <ul>
+                    <li>Local SIM card providers: NCell, NTC, Smart Cell.</li>
+                    <li>NCell and NTC recommended for better coverage.</li>
+                    <li>Smart Cell ideal for urban areas.</li>
+                  </ul>
+
                   <Paragraph>
-                    For a SIM card, if you only plan to travel between cities
-                    like KTM and PKR, then Smart Cell will cost you the least.
-                    If your plan is to hike and go to mountains, then you can
-                    take either NCELL or NTC as both have large coverage. You
-                    can also directly use an eSIM booked from any app from your
-                    home country, but it will be a lot more expensive compared
-                    to a local SIM.
-                  </Paragraph>
-                  <Paragraph>
-                    <strong>Requirements:</strong>
-                    <br />
-                    - Passport size photo (if you don’t have, don’t worry, the
-                    airport will set you up for a minimal charge)
-                    <br />- 100 NRS for a SIM outside the airport itself, and
-                    additional data costs may vary according to the provider.
-                    (All the rates you see at the airport are for data and don’t
-                    include the SIM.)
+                    <Paragraph>
+                      <strong>Requirements:</strong>
+                      Passport size photo (if you don’t have, don’t worry, the
+                      airport will set you up for a minimal charge)
+                      <br />
+                    </Paragraph>
+                    <Paragraph>
+                      <strong>Note:</strong> 100 NRS for a SIM outside the
+                      airport itself, and additional data costs may vary
+                      according to the provider. (All the rates you see at the
+                      airport are for data and don’t include the SIM.)
+                    </Paragraph>
                   </Paragraph>
                 </Paragraph>
 
+                <div className="border border-blue-300 rounded-md p-4 bg-gray-50">
+                  <Paragraph className="mb-0">
+                    <div className="flex items-center mb-2">
+                      <StarOutlined
+                        style={{
+                          fontSize: "24px",
+                          color: "#FFD700",
+                          marginRight: "8px",
+                        }}
+                      />
+                      <Title level={3} style={{ marginBottom: 0 }}>
+                        Our Recommendation:{" "}
+                        <span style={{ fontWeight: "normal" }}>NCELL</span>
+                      </Title>
+                    </div>
+                    <div>
+                      <Paragraph>
+                        Faster data compared to NTC. Ideal for travelers needing
+                        reliable internet connectivity throughout their journey.
+                      </Paragraph>
+                    </div>
+                  </Paragraph>
+                </div>
                 <Divider />
-
-                <Paragraph id="recommendation">
-                  <Title level={3}>Our Recommendation</Title>
-                  <div className="border border-gray-300 rounded-md p-4 bg-gray-100">
-                    <Title level={4} style={{ marginBottom: "8px" }}>
-                      NCELL SIM Card
-                    </Title>
-                    <Paragraph style={{ marginBottom: 0 }}>
-                      For faster data compared to NTC.
+                <Paragraph id="transport">
+                  <Title level={3}>Transport</Title>
+                  <Paragraph>
+                    <ul>
+                      <li>Use "Pathau" in KTM and "In-Drive" in PKR</li>
+                      <li>
+                        If wanna use local taxi, get outside Airport for better
+                        price as there is high parking fee in Airport
+                      </li>
+                    </ul>
+                    <Paragraph>
+                      <strong>Our Recommendation:</strong> Use app for easier
+                      and smoother experience as bargaining is not involved.
                     </Paragraph>
-                  </div>
+                  </Paragraph>
                 </Paragraph>
               </div>
             </Col>

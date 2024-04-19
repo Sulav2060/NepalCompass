@@ -8,61 +8,60 @@ const { SubMenu } = Menu;
 const LeftSidebar = () => {
   const items = [
     {
-      label: "Airport",
-      key: "airport",
+      label: "Welcome to Nepal",
+      key: "welcome",
+    },
+    {
+      label: "Getting Started",
+      key: "getting_started",
       children: [
-        { label: "On Arrival Visa", key: "pagetemplate" },
-        { label: "Currency Exchange", key: "pagetemplate" },
-        { label: "SIM Card", key: "pagetemplate" },
-        { label: "Travel to Hotel", key: "pagetemplate" },
+        { label: "Arriving in Nepal", key: "arriving" },
+        { label: "Accommodation", key: "accommodation" },
+        { label: "Getting Around", key: "getting_around" },
       ],
     },
     {
-      label: "Accommodation",
-      key: "accommodation",
+      label: "Food and Drink",
+      key: "food_and_drink",
       children: [
-        { label: "Hotels", key: "pagetemplate" },
-        { label: "Hostels", key: "pagetemplate" },
-      ],
-    },
-    { label: "Travel Medium", key: "pagetemplate" },
-    {
-      label: "Food",
-      key: "food",
-      children: [
-        { label: "Local Cuisine", key: "pagetemplate" },
-        { label: "Continental Cuisine", key: "pagetemplate" },
+        { label: "Local Cuisine", key: "local_cuisine" },
+        { label: "Continental Cuisine", key: "continental_cuisine" },
+        { label: "Street Food", key: "street_food" },
+        { label: "Nightlife and Bars", key: "nightlife_bars" },
       ],
     },
     {
-      label: "Things to Do",
-      key: "things_to_do",
+      label: "Sightseeing and Activities",
+      key: "sightseeing_activities",
       children: [
-        {
-          label: "Travel Agency or Self-Guided Options (mention Garni)",
-          key: "agency_options",
-        },
-        { label: "Traditional Activities", key: "traditional_activities" },
-        {
-          label: "Adventure Activities",
-          key: "adventure_activities",
-          children: [
-            { label: "Treks", key: "treks" },
-            { label: "Adrenaline Sports", key: "adrenaline_sports" },
-          ],
-        },
-        {
-          label: "Places to Visit",
-          key: "places_to_visit",
-          children: [
-            { label: "Natural Attractions", key: "natural_attractions" },
-            { label: "Cultural Sites", key: "cultural_sites" },
-            { label: "Hotspots", key: "hotspots" },
-          ],
-        },
+        { label: "Kathmandu", key: "kathmandu" },
+        { label: "Pokhara", key: "pokhara" },
+        { label: "Trekking", key: "trekking" },
+        { label: "Adventure Sports", key: "adventure_sports" },
+        { label: "Cultural Experiences", key: "cultural_experiences" },
+        { label: "Nature and Wildlife", key: "nature_wildlife" },
       ],
     },
-    { label: "Tours and Travels", key: "tours_and_travels" },
+    {
+      label: "Shopping",
+      key: "shopping",
+      children: [
+        { label: "Handicrafts", key: "handicrafts" },
+        { label: "Souvenirs", key: "souvenirs" },
+        { label: "Local Markets", key: "local_markets" },
+      ],
+    },
+    {
+      label: "Practical Information",
+      key: "practical_info",
+      children: [
+        { label: "Safety and Health", key: "safety_health" },
+        { label: "Money Matters", key: "money_matters" },
+        { label: "Local Etiquette and Customs", key: "etiquette_customs" },
+        { label: "Language and Communication", key: "language_communication" },
+        { label: "Travel Tips and Resources", key: "travel_tips" },
+      ],
+    },
   ];
 
   const renderMenuItem = (item) => {
@@ -86,7 +85,7 @@ const LeftSidebar = () => {
   };
 
   return (
-    <div className="fixed w-1/6">
+    <div className="fixed w-1/6 x overflow-scroll">
       <Menu
         mode="inline"
         defaultSelectedKeys={["airport"]}
