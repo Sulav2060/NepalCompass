@@ -17,25 +17,20 @@ const LeftSidebar = () => {
       children: [
         { label: "Arriving in Nepal", key: "arriving" },
         { label: "Accommodation", key: "accommodation" },
-        { label: "Getting Around", key: "getting_around" },
       ],
     },
     {
       label: "Food and Drink",
       key: "food_and_drink",
-      children: [
-        { label: "Local Cuisine", key: "local_cuisine" },
-        { label: "Continental Cuisine", key: "continental_cuisine" },
-        { label: "Street Food", key: "street_food" },
-        { label: "Nightlife and Bars", key: "nightlife_bars" },
-      ],
+    },
+    {
+      label: "Transportation",
+      key: "transportation",
     },
     {
       label: "Sightseeing and Activities",
       key: "sightseeing_activities",
       children: [
-        { label: "Kathmandu", key: "kathmandu" },
-        { label: "Pokhara", key: "pokhara" },
         { label: "Trekking", key: "trekking" },
         { label: "Adventure Sports", key: "adventure_sports" },
         { label: "Cultural Experiences", key: "cultural_experiences" },
@@ -45,11 +40,6 @@ const LeftSidebar = () => {
     {
       label: "Shopping",
       key: "shopping",
-      children: [
-        { label: "Handicrafts", key: "handicrafts" },
-        { label: "Souvenirs", key: "souvenirs" },
-        { label: "Local Markets", key: "local_markets" },
-      ],
     },
     {
       label: "Practical Information",
@@ -85,7 +75,7 @@ const LeftSidebar = () => {
   };
 
   return (
-    <div className="fixed w-1/6 x overflow-scroll">
+    <div className="fixed w-1/6 x overflow-auto">
       <Menu
         mode="inline"
         defaultSelectedKeys={["airport"]}
