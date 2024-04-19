@@ -4,6 +4,7 @@ import RightSidebar from "../components/RightSidebar";
 import LeftSidebar from "../components/LeftSidebar";
 import Navbar from "../components/Navbar";
 import { StarOutlined } from "@ant-design/icons";
+import RecommendationCard from "../components/RecommendationCard";
 
 const { Link } = Anchor;
 const { Title, Paragraph } = Typography;
@@ -105,29 +106,11 @@ const Airport = () => {
                   </Paragraph>
                 </Paragraph>
 
-                <div className="border border-blue-300 rounded-md p-4 bg-gray-50">
-                  <Paragraph className="mb-0">
-                    <div className="flex items-center mb-2">
-                      <StarOutlined
-                        style={{
-                          fontSize: "24px",
-                          color: "#FFD700",
-                          marginRight: "8px",
-                        }}
-                      />
-                      <Title level={3} style={{ marginBottom: 0 }}>
-                        Our Recommendation:{" "}
-                        <span style={{ fontWeight: "normal" }}>NCELL</span>
-                      </Title>
-                    </div>
-                    <div>
-                      <Paragraph>
-                        Faster data compared to NTC. Ideal for travelers needing
-                        reliable internet connectivity throughout their journey.
-                      </Paragraph>
-                    </div>
-                  </Paragraph>
-                </div>
+                <RecommendationCard
+                  recommendation="NCELL"
+                  reason="Faster data compared to NTC. Ideal for travelers needing reliable internet connectivity throughout their journey."
+                />
+
                 <Divider />
                 <Paragraph id="transport">
                   <Title level={3}>Transport</Title>

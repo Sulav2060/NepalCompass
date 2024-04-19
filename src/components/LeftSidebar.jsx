@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu } from "antd";
-import { MailOutlined } from "@ant-design/icons";
+import { FolderOutlined, FileTextOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom"; // Import Link from React Router
 
 const { SubMenu } = Menu;
@@ -21,7 +21,7 @@ const LeftSidebar = () => {
     },
     {
       label: "Food and Drink",
-      key: "food_and_drink",
+      key: "foodanddrink",
     },
     {
       label: "Transportation",
@@ -57,9 +57,9 @@ const LeftSidebar = () => {
   const renderMenuItem = (item) => {
     if (item.children) {
       return (
-        <SubMenu key={item.key} icon={<MailOutlined />} title={item.label}>
+        <SubMenu key={item.key} icon={<FolderOutlined />} title={item.label}>
           {item.children.map((child) => (
-            <Menu.Item key={child.key}>
+            <Menu.Item key={child.key} icon={<FileTextOutlined />}>
               <Link to={`/${child.key}`}>{child.label}</Link>
             </Menu.Item>
           ))}
@@ -67,7 +67,7 @@ const LeftSidebar = () => {
       );
     } else {
       return (
-        <Menu.Item key={item.key} icon={<MailOutlined />}>
+        <Menu.Item key={item.key} icon={<FileTextOutlined />}>
           <Link to={`/${item.key}`}>{item.label}</Link>
         </Menu.Item>
       );
@@ -78,8 +78,12 @@ const LeftSidebar = () => {
     <div className="fixed w-1/6 x overflow-auto">
       <Menu
         mode="inline"
-        defaultSelectedKeys={["airport"]}
-        defaultOpenKeys={["airport"]}
+        defaultSelectedKeys={["welcome"]}
+        defaultOpenKeys={[
+          "getting_started",
+          "sightseeing_activities",
+          "practical_info",
+        ]}
         style={{ height: "100%", borderRight: 0 }}
       >
         {items.map((item) => renderMenuItem(item))}
