@@ -1,0 +1,109 @@
+{
+    "Airport": {
+        "title": "Airport",
+        "visa": {
+            "title": "On Arrival Visa",
+            "points": [
+                "Visa-on-arrival facility available for most nationalities.",
+                "Visa fees:"
+            ],
+            "recommendation": "Our Recommendation: Fill the form online and come and pay here in Nepal which will cost you:",
+            "note": "Note: Indian currency isn’t accepted at the visa pay counter."
+        },
+        "currency": {
+            "title": "Currency Exchange",
+            "points": [
+                "Currency exchange available at airport.",
+                "Better rates at ATMs in capital."
+            ]
+        },
+        "sim": {
+            "title": "SIM Card",
+            "points": [
+                "Local SIM card providers: NCell, NTC, Smart Cell.",
+                "NCell and NTC recommended for better coverage.",
+                "Smart Cell ideal for urban areas."
+            ],
+            "requirements": "Requirements: Passport size photo (if you don’t have, don’t worry, the airport will set you up for a minimal charge)",
+            "note": "Note: 100 NRS for a SIM outside the airport itself, and additional data costs may vary according to the provider. (All the rates you see at the airport are for data and don’t include the SIM.)",
+            "recommendation": "Our Recommendation: NCELL",
+            "recommendationNote": "Faster data compared to NTC. Ideal for travelers needing reliable internet connectivity throughout their journey."
+        },
+        "transport": {
+            "title": "Transport",
+            "points": [
+                "Use \"Pathau\" in KTM and \"In-Drive\" in PKR",
+                "If wanna use local taxi, get outside Airport for better price as there is high parking fee in Airport"
+            ],
+            "recommendation": "Our Recommendation: Use app for easier and smoother experience as bargaining is not involved."
+        }
+    },
+    "NatureWildlife": {
+        "title": "Nature and Wildlife in Nepal",
+        "chitwan": {
+            "title": "Chitwan National Park",
+            "description": [
+                "Chitwan National Park, a UNESCO World Heritage Site, is a premier destination for wildlife viewing in Nepal. This lush subtropical park is home to endangered species like the one-horned rhinoceros, Bengal tiger, sloth bear, and numerous species of birds and reptiles.",
+                "Visitors can embark on thrilling jungle safaris, canoe rides, and nature walks to spot these magnificent creatures in their natural habitats."
+            ]
+        },
+        "bardia": {
+            "title": "Bardia National Park",
+            "description": [
+                "Bardia National Park, located in western Nepal, is another haven for wildlife enthusiasts. This lesser-known park boasts rich biodiversity, including tigers, elephants, gharials (fish-eating crocodiles), and over 500 species of birds.",
+                "Guided jungle walks, elephant safaris, and jeep tours offer unique opportunities to explore this pristine wilderness."
+            ]
+        },
+        "uppermustang": {
+            "title": "Upper Mustang",
+            "description": [
+                "For those seeking a taste of the ancient Himalayan kingdom, Upper Mustang is a must-visit destination. This remote region, once a restricted area, is known for its arid landscapes, ancient monasteries, and unique blend of Tibetan and Nepali cultures.",
+                "Visitors can embark on guided treks, experiencing the hospitality of the Mustang people and witnessing their traditional way of life. Permits are required to visit Upper Mustang, and the cost and process may vary."
+            ]
+        },
+        "rara": {
+            "title": "Rara Lake",
+            "description": [
+                "Rara Lake, nestled in the far northwestern corner of Nepal, is a natural wonder like no other. This pristine freshwater lake, surrounded by towering peaks and alpine meadows, is a trekker's paradise and a serene escape from the bustling cities.",
+                "Visitors can camp by the lake, hike through the surrounding trails, and immerse themselves in the tranquility of this remote and unspoiled region."
+            ]
+        }
+    },
+    "SafetyHealth": {
+        "title": "Safety and Health in Nepal",
+        "emergencyNumbers": {
+            "title": "Emergency Numbers"
+        },
+        "travelInsurance": {
+            "title": "Travel Insurance",
+            "description": " It's highly recommended to purchase comprehensive travel insurance that covers activities like trekking and adventure sports, as well as emergency medical evacuation."
+        },
+        "altitude": {
+            "title": "Altitude Sickness",
+            "description": "Many popular trekking destinations in Nepal involve high altitudes, which can lead to altitude sickness. It's to acclimatize properly, stay hydrated, and descend if experiencing severe symptoms."
+        },
+        "vaccinations": {
+            "title": "Vaccinations",
+            "description": "Consult with a travel health professional to ensure you have the necessary vaccinations and medications for your trip to Nepal. Recommended vaccinations may include hepatitis A, typhoid, and others depending on your travel plans."
+        }
+    },
+    "Trekking": {
+        "title": "Trekking in Nepal",
+        "everest": {
+            "title": "Everest Base Camp Trek",
+            "description": "A legendary trek to the base of the world's highest peak, Mt. Everest. The journey takes approximately 12-14 days, offering breathtaking views and high-altitude challenges."
+        },
+        "annapurna": {
+            "title": "Annapurna Circuit Trek",
+            "description": "A classic trek circumnavigating the Annapurna massif. Takes around 15-20 days, passing through diverse landscapes and high-altitude passes."
+        },
+        "langtang": {
+            "title": "Langtang Valley Trek",
+            "description": "A beautiful trek in the Langtang region, known for its cultural richness and scenic beauty. It typically lasts 7-10 days, offering moderate difficulty."
+        },
+        "ghorepani": {
+            "title": "Ghorepani Poon Hill Trek",
+            "description": "A shorter trek renowned for its stunning sunrise views from Poon Hill. Lasts 4-6 days and offers a moderate trekking experience."
+        }
+    }
+}
