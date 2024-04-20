@@ -61,7 +61,7 @@ const LeftSidebar = () => {
   const renderMenuItem = (item) => {
     if (item.children) {
       return (
-        <SubMenu key={item.key} icon={FolderOutlined< />} title={item.label}>
+        <SubMenu key={item.key} icon={<FolderOutlined />} title={item.label}>
           {item.children.map((child) => (
             <Menu.Item key={child.key} icon={<FileTextOutlined />}>
               <Link to={`/${child.key}`}>{child.label}</Link>
