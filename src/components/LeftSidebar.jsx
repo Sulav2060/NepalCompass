@@ -1,8 +1,10 @@
-import React from "react";
-import { Menu } from "antd";
-import { MailOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom"; // Import Link from React Router
+import React, { useState } from "react";
+import { Layout, Menu, Drawer, Button } from "antd";
+import { MailOutlined, MenuOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
+const { Sider } = Layout;
 const { SubMenu } = Menu;
 
 const LeftSidebar = () => {
@@ -21,7 +23,7 @@ const LeftSidebar = () => {
     },
     {
       label: "Food and Drink",
-      key: "food_and_drink",
+      key: "foodanddrink",
     },
     {
       label: "Transportation",
@@ -57,9 +59,16 @@ const LeftSidebar = () => {
   const renderMenuItem = (item) => {
     if (item.children) {
       return (
-        <SubMenu key={item.key} icon={<MailOutlined />} title={item.label}>
+        <SubMenu
+          key={item.key}
+          icon={<MailOutlined />}
+          title={item.label}
+          onTitleClick={
+            isMobile ? (e) => e.domEvent.stopPropagation() : undefined
+          }
+        >
           {item.children.map((child) => (
-            <Menu.Item key={child.key}>
+            <Menu.Item key={child.key} icon={<FileTextOutlined />}>
               <Link to={`/${child.key}`}>{child.label}</Link>
             </Menu.Item>
           ))}
@@ -67,7 +76,7 @@ const LeftSidebar = () => {
       );
     } else {
       return (
-        <Menu.Item key={item.key} icon={<MailOutlined />}>
+        <Menu.Item key={item.key} icon={<FileTextOutlined />}>
           <Link to={`/${item.key}`}>{item.label}</Link>
         </Menu.Item>
       );

@@ -4,6 +4,12 @@ import RightSidebar from "../components/RightSidebar";
 import LeftSidebar from "../components/LeftSidebar";
 import Navbar from "../components/Navbar";
 import { StarOutlined } from "@ant-design/icons";
+<<<<<<< HEAD
+=======
+import titletexts from "../data/titletexts.json";
+import tabletexts from "../data/tabletexts.json";
+import texts from "../data/texts.json";import RecommendationCard from "../components/RecommendationCard";
+>>>>>>> bb44a66fd3abf9576e2433bc5da751d73c91d40f
 
 const { Link } = Anchor;
 const { Title, Paragraph } = Typography;
