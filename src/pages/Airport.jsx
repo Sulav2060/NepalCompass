@@ -4,7 +4,8 @@ import { Row, Col, Anchor, Typography, Divider, Table } from "antd";
 import { StarOutlined } from "@ant-design/icons";
 import titletexts from "../data/titletexts.json";
 import tabletexts from "../data/tabletexts.json";
-import texts from "../data/texts.json";
+import texts from "../data/texts.json";import RecommendationCard from "../components/RecommendationCard";
+
 const { Link } = Anchor;
 const { Title, Paragraph } = Typography;
 
