@@ -19,43 +19,43 @@ function App() {
             element={
               <PageTemplate
                 contentComponent={<Airport />}
-                navigationItems={Airport.navigationItems}
+                // navigationItems={Airport.navigationItems}
               />
             }
           />
           <Route
-            path="/arriving"
+            path="/arriving/*"
             element={
               <PageTemplate
                 contentComponent={<Airport />}
-                navigationItems={Airport.navigationItems}
+                // navigationItems={Airport.navigationItems}
               />
             }
           />
           <Route
-            path="/trekking"
+            path="/trekking/*"
             element={
               <PageTemplate
                 contentComponent={<Trekking />}
-                navigationItems={Trekking.navigationItems}
+                // navigationItems={Trekking.navigationItems}
               />
             }
           />
           <Route
-            path="/safety_health"
+            path="/safety_health/*"
             element={
               <PageTemplate
                 contentComponent={<SafetyHealth />}
-                navigationItems={SafetyHealth.navigationItems}
+                // navigationItems={SafetyHealth.navigationItems}
               />
             }
           />
           <Route
-            path="/nature_wildlife"
+            path="/nature_wildlife/*"
             element={
               <PageTemplate
                 contentComponent={<NatureWildlife />}
-                navigationItems={NatureWildlife.navigationItems}
+                // navigationItems={NatureWildlife.navigationItems}
               />
             }
           />
