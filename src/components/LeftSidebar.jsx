@@ -1,74 +1,74 @@
-import React from "react";
-import { Menu } from "antd";
-import { MailOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom"; // Import Link from React Router
+import React, { useState } from "react";
+import { Layout, Menu, Drawer, Button } from "antd";
+import { MailOutlined, MenuOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
+const { Sider } = Layout;
 const { SubMenu } = Menu;
 
 const LeftSidebar = () => {
+  const [visible, setVisible] = useState(false);
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const items = [
     {
-      label: "Airport",
-      key: "airport",
+      label: "Welcome to Nepal",
+      key: "arriving",
+    },
+    {
+      label: "Getting Started",
+      key: "getting_started",
       children: [
-        { label: "On Arrival Visa", key: "pagetemplate" },
-        { label: "Currency Exchange", key: "pagetemplate" },
-        { label: "SIM Card", key: "pagetemplate" },
-        { label: "Travel to Hotel", key: "pagetemplate" },
+        { label: "Arriving in Nepal", key: "arriving" },
+        { label: "Accommodation", key: "accommodation" },
       ],
     },
     {
-      label: "Accommodation",
-      key: "accommodation",
-      children: [
-        { label: "Hotels", key: "pagetemplate" },
-        { label: "Hostels", key: "pagetemplate" },
-      ],
-    },
-    { label: "Travel Medium", key: "pagetemplate" },
-    {
-      label: "Food",
-      key: "food",
-      children: [
-        { label: "Local Cuisine", key: "pagetemplate" },
-        { label: "Continental Cuisine", key: "pagetemplate" },
-      ],
+      label: "Food and Drink",
+      key: "food_and_drink",
     },
     {
-      label: "Things to Do",
-      key: "things_to_do",
+      label: "Transportation",
+      key: "transportation",
+    },
+    {
+      label: "Sightseeing and Activities",
+      key: "sightseeing_activities",
       children: [
-        {
-          label: "Travel Agency or Self-Guided Options (mention Garni)",
-          key: "agency_options",
-        },
-        { label: "Traditional Activities", key: "traditional_activities" },
-        {
-          label: "Adventure Activities",
-          key: "adventure_activities",
-          children: [
-            { label: "Treks", key: "treks" },
-            { label: "Adrenaline Sports", key: "adrenaline_sports" },
-          ],
-        },
-        {
-          label: "Places to Visit",
-          key: "places_to_visit",
-          children: [
-            { label: "Natural Attractions", key: "natural_attractions" },
-            { label: "Cultural Sites", key: "cultural_sites" },
-            { label: "Hotspots", key: "hotspots" },
-          ],
-        },
+        { label: "Trekking", key: "trekking" },
+        { label: "Adventure Sports", key: "adventure_sports" },
+        { label: "Cultural Experiences", key: "cultural_experiences" },
+        { label: "Nature and Wildlife", key: "nature_wildlife" },
       ],
     },
-    { label: "Tours and Travels", key: "tours_and_travels" },
+    {
+      label: "Shopping",
+      key: "shopping",
+    },
+    {
+      label: "Practical Information",
+      key: "practical_info",
+      children: [
+        { label: "Safety and Health", key: "safety_health" },
+        { label: "Money Matters", key: "money_matters" },
+        { label: "Local Etiquette and Customs", key: "etiquette_customs" },
+        { label: "Language and Communication", key: "language_communication" },
+        { label: "Travel Tips and Resources", key: "travel_tips" },
+      ],
+    },
   ];
 
   const renderMenuItem = (item) => {
     if (item.children) {
       return (
-        <SubMenu key={item.key} icon={<MailOutlined />} title={item.label}>
+        <SubMenu
+          key={item.key}
+          icon={<MailOutlined />}
+          title={item.label}
+          onTitleClick={
+            isMobile ? (e) => e.domEvent.stopPropagation() : undefined
+          }
+        >
           {item.children.map((child) => (
             <Menu.Item key={child.key}>
               <Link to={`/${child.key}`}>{child.label}</Link>
@@ -84,18 +84,40 @@ const LeftSidebar = () => {
       );
     }
   };
+  const showDrawer = () => {
+    setVisible(true);
+  };
 
-  return (
-    <div className="fixed w-1/6">
-      <Menu
-        mode="inline"
-        defaultSelectedKeys={["airport"]}
-        defaultOpenKeys={["airport"]}
-        style={{ height: "100%", borderRight: 0 }}
+  const onClose = () => {
+    setVisible(false);
+  };
+
+  return isMobile ? (
+    <div>
+      <Button type="primary" onClick={showDrawer}>
+        <MenuOutlined />
+      </Button>
+      <Drawer
+        title="Menu"
+        placement="left"
+        onClick={onClose}
+        onClose={onClose}
+        visible={visible}
       >
-        {items.map((item) => renderMenuItem(item))}
-      </Menu>
+        <Menu defaultSelectedKeys={["1"]} mode="inline">
+          {items.map(renderMenuItem)}
+        </Menu>
+      </Drawer>
     </div>
+  ) : (
+    <Sider
+      width={275}
+      className="overflow-auto"
+    >
+      <Menu mode="inline" style={{ borderRight: 0 }}>
+        {items.map(renderMenuItem)}
+      </Menu>
+    </Sider>
   );
 };
 
