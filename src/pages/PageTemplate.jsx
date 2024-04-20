@@ -1,15 +1,12 @@
 //all pages called from this page
 //apply all layout css here
 import React, { useState } from "react";
-import { Route, Routes } from "react-router-dom";
 import RightSidebar from "../components/RightSidebar";
 import LeftSidebar from "../components/LeftSidebar";
 import Navbar from "../components/Navbar";
+import titletexts from "../data/titletexts.json";
 
-const PageTemplate = ({
-  contentComponent: ContentComponent,
-  navigationItems,
-}) => {
+const PageTemplate = ({ contentComponent }) => {
   // used better approach
   // const navigationItems = [
   //   ///page ma vako title haru list garni
@@ -46,10 +43,8 @@ const PageTemplate = ({
         <LeftSidebar />
       </div>
       <div className="row-start-2 col-start-2 col-span-2 mt-20">
-        {/* <Routes>
-          <Route render={() => <ContentComponent />} />
-        </Routes> */}
-        {ContentComponent}
+        {console.log("contentComponent:", contentComponent.type.name)}
+        {contentComponent}
       </div>
       <div
         className="row-start-2 col-span-1 mt-20 fixed"
@@ -59,7 +54,16 @@ const PageTemplate = ({
           scrollbarColor: "rgba(0, 0, 0, 0.2) transparent",
         }}
       >
-        <RightSidebar navigationItems={navigationItems} />
+        <RightSidebar
+          navigationItems={
+            titletexts[contentComponent.type.name]?.navigationItems
+          }
+        />
+        {console.log(
+          "content",
+          titletexts[contentComponent.type.name]?.navigationItems
+        )}
+        {console.log("titletexts:", titletexts.Airport.navigationItems)}
       </div>
     </div>
   );

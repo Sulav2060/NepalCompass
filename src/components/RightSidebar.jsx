@@ -24,7 +24,7 @@ const RightSidebar = ({ navigationItems }) => {
 
       setActiveItems(visibleItems);
     };
-
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -37,6 +37,10 @@ const RightSidebar = ({ navigationItems }) => {
   const onClose = () => {
     setVisible(false);
   };
+  if (!navigationItems) {
+    return null; 
+  }
+
   return isMobile ? (
     <div>
       <Button
