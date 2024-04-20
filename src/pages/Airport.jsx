@@ -8,8 +8,8 @@ import { StarOutlined } from "@ant-design/icons";
 =======
 import titletexts from "../data/titletexts.json";
 import tabletexts from "../data/tabletexts.json";
-import texts from "../data/texts.json";import RecommendationCard from "../components/RecommendationCard";
->>>>>>> bb44a66fd3abf9576e2433bc5da751d73c91d40f
+import texts from "../data/texts.json";
+import RecommendationCard from "../components/RecommendationCard";
 
 const { Link } = Anchor;
 const { Title, Paragraph } = Typography;

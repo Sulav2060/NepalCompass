@@ -23,7 +23,7 @@ const LeftSidebar = () => {
     },
     {
       label: "Food and Drink",
-      key: "foodanddrink",
+      key: "food_and_drink",
     },
     {
       label: "Transportation",
@@ -68,7 +68,7 @@ const LeftSidebar = () => {
           }
         >
           {item.children.map((child) => (
-            <Menu.Item key={child.key} icon={<FileTextOutlined />}>
+            <Menu.Item key={child.key}>
               <Link to={`/${child.key}`}>{child.label}</Link>
             </Menu.Item>
           ))}
@@ -76,7 +76,7 @@ const LeftSidebar = () => {
       );
     } else {
       return (
-        <Menu.Item key={item.key} icon={<FileTextOutlined />}>
+        <Menu.Item key={item.key} icon={<MailOutlined />}>
           <Link to={`/${item.key}`}>{item.label}</Link>
         </Menu.Item>
       );
