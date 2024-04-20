@@ -8,10 +8,12 @@ const { Sider } = Layout;
 const { SubMenu } = Menu;
 
 const LeftSidebar = () => {
+  const [visible, setVisible] = useState(false);
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const items = [
     {
       label: "Welcome to Nepal",
-      key: "welcome",
+      key: "arriving",
     },
     {
       label: "Getting Started",
@@ -82,18 +84,40 @@ const LeftSidebar = () => {
       );
     }
   };
+  const showDrawer = () => {
+    setVisible(true);
+  };
 
-  return (
-    <div className="fixed w-1/6 x overflow-auto">
-      <Menu
-        mode="inline"
-        defaultSelectedKeys={["airport"]}
-        defaultOpenKeys={["airport"]}
-        style={{ height: "100%", borderRight: 0 }}
+  const onClose = () => {
+    setVisible(false);
+  };
+
+  return isMobile ? (
+    <div>
+      <Button type="primary" onClick={showDrawer}>
+        <MenuOutlined />
+      </Button>
+      <Drawer
+        title="Menu"
+        placement="left"
+        onClick={onClose}
+        onClose={onClose}
+        visible={visible}
       >
-        {items.map((item) => renderMenuItem(item))}
-      </Menu>
+        <Menu defaultSelectedKeys={["1"]} mode="inline">
+          {items.map(renderMenuItem)}
+        </Menu>
+      </Drawer>
     </div>
+  ) : (
+    <Sider
+      width={275}
+      className="overflow-auto"
+    >
+      <Menu mode="inline" style={{ borderRight: 0 }}>
+        {items.map(renderMenuItem)}
+      </Menu>
+    </Sider>
   );
 };
 

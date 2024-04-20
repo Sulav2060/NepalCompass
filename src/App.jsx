@@ -6,9 +6,11 @@ import Trekking from "./pages/TrekkingHiking";
 import SafetyHealth from "./pages/SafetyHealth";
 import NatureWildlife from "./pages/NatureWildlife";
 
->>>>>>> bb44a66fd3abf9576e2433bc5da751d73c91d40f
 function App() {
   return (
+    ///ContentComponent changes based on the current route. So, when the route changes, the ContentComponent changes, but the component itself doesn't re-render.
+    //This is why the page needs to be refreshed to see the changes.
+    //pagetemplate vitra rerender garna parchha
     <Router>
       <div>
         <Routes>

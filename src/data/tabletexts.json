@@ -1,0 +1,127 @@
+{
+    "Airport": {
+        "visaDataSource": [
+            {
+                "key": "1",
+                "duration": "15 Days",
+                "cost": "30 USD"
+            },
+            {
+                "key": "2",
+                "duration": "30 Days",
+                "cost": "50 USD"
+            },
+            {
+                "key": "3",
+                "duration": "90 Days",
+                "cost": "125 USD"
+            }
+        ],
+        "visaColumns": [
+            {
+                "title": "Duration",
+                "dataIndex": "duration",
+                "key": "duration"
+            },
+            {
+                "title": "Cost",
+                "dataIndex": "cost",
+                "key": "cost"
+            }
+        ]
+    },
+    "SafetyHealth": {
+        "emergencyNumbersDataSource": [
+            {
+                "key": "1",
+                "service": "Police",
+                "number": "100"
+            },
+            {
+                "key": "2",
+                "service": "Ambulance",
+                "number": "102"
+            },
+            {
+                "key": "3",
+                "service": "Fire",
+                "number": "101"
+            }
+        ],
+        "emergencyNumbersColumns": [
+            {
+                "title": "Service",
+                "dataIndex": "service",
+                "key": "service"
+            },
+            {
+                "title": "Number",
+                "dataIndex": "number",
+                "key": "number"
+            }
+        ]
+    },
+    "Trekking": {
+        "trekkingDataSource": [
+            {
+                "key": "1",
+                "name": "Annapurna Base Camp",
+                "duration": "7-10 Days",
+                "cost": "$800 - $1500",
+                "difficulty": "Moderate",
+                "permits": "TIMS Permit, Annapurna Conservation Area Permit"
+            },
+            {
+                "key": "2",
+                "name": "Everest Base Camp Trek",
+                "duration": "12-14 Days",
+                "cost": "$1000 - $2000",
+                "difficulty": "Varied, including high altitude",
+                "permits": "TIMS Permit, Sagarmatha National Park Permit"
+            },
+            {
+                "key": "3",
+                "name": "Langtang Valley Trek",
+                "duration": "7-10 Days",
+                "cost": "$500 - $1000",
+                "difficulty": "Moderate",
+                "permits": "TIMS Permit, Langtang National Park Permit"
+            },
+            {
+                "key": "4",
+                "name": "Ghorepani Poon Hill Trek",
+                "duration": "4-6 Days",
+                "cost": "$400 - $800",
+                "difficulty": "Moderate",
+                "permits": "TIMS Permit"
+            }
+        ],
+        "trekkingColumns": [
+            {
+                "title": "Trail Name",
+                "dataIndex": "name",
+                "key": "name"
+            },
+            {
+                "title": "Duration",
+                "dataIndex": "duration",
+                "key": "duration"
+            },
+            {
+                "title": "Cost",
+                "dataIndex": "cost",
+                "key": "cost"
+            },
+            {
+                "title": "Difficulty",
+                "dataIndex": "difficulty",
+                "key": "difficulty"
+            },
+            {
+                "title": "Permits",
+                "dataIndex": "permits",
+                "key": "permits"
+            }
+        ]
+    }
+}
