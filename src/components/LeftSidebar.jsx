@@ -1,19 +1,15 @@
-import React, { useState } from "react";
-import { Layout, Menu, Drawer, Button } from "antd";
-import { MailOutlined, MenuOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
+import React from "react";
+import { Menu } from "antd";
+import { MailOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom"; // Import Link from React Router
 
-const { Sider } = Layout;
 const { SubMenu } = Menu;
 
 const LeftSidebar = () => {
-  const [visible, setVisible] = useState(false);
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const items = [
     {
       label: "Welcome to Nepal",
-      key: "arriving",
+      key: "welcome",
     },
     {
       label: "Getting Started",
@@ -61,14 +57,7 @@ const LeftSidebar = () => {
   const renderMenuItem = (item) => {
     if (item.children) {
       return (
-        <SubMenu
-          key={item.key}
-          icon={<MailOutlined />}
-          title={item.label}
-          onTitleClick={
-            isMobile ? (e) => e.domEvent.stopPropagation() : undefined
-          }
-        >
+        <SubMenu key={item.key} icon={<MailOutlined />} title={item.label}>
           {item.children.map((child) => (
             <Menu.Item key={child.key}>
               <Link to={`/${child.key}`}>{child.label}</Link>
@@ -84,40 +73,18 @@ const LeftSidebar = () => {
       );
     }
   };
-  const showDrawer = () => {
-    setVisible(true);
-  };
 
-  const onClose = () => {
-    setVisible(false);
-  };
-
-  return isMobile ? (
-    <div>
-      <Button type="primary" onClick={showDrawer}>
-        <MenuOutlined />
-      </Button>
-      <Drawer
-        title="Menu"
-        placement="left"
-        onClick={onClose}
-        onClose={onClose}
-        visible={visible}
+  return (
+    <div className="fixed w-1/6 x overflow-auto">
+      <Menu
+        mode="inline"
+        defaultSelectedKeys={["airport"]}
+        defaultOpenKeys={["airport"]}
+        style={{ height: "100%", borderRight: 0 }}
       >
-        <Menu defaultSelectedKeys={["1"]} mode="inline">
-          {items.map(renderMenuItem)}
-        </Menu>
-      </Drawer>
-    </div>
-  ) : (
-    <Sider
-      width={275}
-      className="overflow-auto"
-    >
-      <Menu mode="inline" style={{ borderRight: 0 }}>
-        {items.map(renderMenuItem)}
+        {items.map((item) => renderMenuItem(item))}
       </Menu>
-    </Sider>
+    </div>
   );
 };
 
