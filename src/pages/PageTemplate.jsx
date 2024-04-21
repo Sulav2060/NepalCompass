@@ -47,7 +47,7 @@ const PageTemplate = ({ contentComponent: ContentComponent, navTitle: navItems }
       >
         <LeftSidebar />
       </div>
-      <div className="row-start-2 col-start-2 col-span-2 mt-20">
+      <div className="row-start-2 col-start-2 col-span-1 mt-20">
         {ContentComponent}
       </div>
       <div
