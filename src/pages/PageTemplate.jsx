@@ -5,8 +5,9 @@ import RightSidebar from "../components/RightSidebar";
 import LeftSidebar from "../components/LeftSidebar";
 import Navbar from "../components/Navbar";
 import titletexts from "../data/titletexts.json";
+import { navigationItems } from '../data/NavigationItems';
 
-const PageTemplate = ({ contentComponent }) => {
+const PageTemplate = ({ contentComponent: ContentComponent }) => {
   // used better approach
   // const navigationItems = [
   //   ///page ma vako title haru list garni
@@ -22,6 +23,10 @@ const PageTemplate = ({ contentComponent }) => {
   const toggleTheme = () => {
     setDarkMode(!darkMode);
   };
+
+  //for rightsidebar(titles)
+  const componentName = ContentComponent; 
+  const navItems = navigationItems[componentName] || [];
 
   return (
     <div
@@ -43,8 +48,8 @@ const PageTemplate = ({ contentComponent }) => {
         <LeftSidebar />
       </div>
       <div className="row-start-2 col-start-2 col-span-2 mt-20">
-        {console.log("contentComponent:", contentComponent.type.name)}
-        {contentComponent}
+        {console.log("contentComponent:", ContentComponent)}
+        {ContentComponent}
       </div>
       <div
         className="row-start-2 col-span-1 mt-20 fixed"
@@ -54,16 +59,18 @@ const PageTemplate = ({ contentComponent }) => {
           scrollbarColor: "rgba(0, 0, 0, 0.2) transparent",
         }}
       >
+        {console.log("this is being passed:", titletexts[ContentComponent.type.name]?.navigationItems)}
         <RightSidebar
           navigationItems={
-            titletexts[contentComponent.type.name]?.navigationItems
+            titletexts[ContentComponent.type.name]?.navigationItems
           }
         />
         {console.log(
           "content",
-          titletexts[contentComponent.type.name]?.navigationItems
+          navItems
         )}
-        {console.log("titletexts:", titletexts.Airport.navigationItems)}
+        {console.log("titletexts:", navigationItems)}
+    
       </div>
     </div>
   );
