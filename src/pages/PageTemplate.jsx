@@ -44,7 +44,7 @@ const PageTemplate = ({
       >
         <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
       </Layout>
-      <Layout className={`${darkMode ? "bg-[#121212]" : "bg-white"}`}>
+      <Layout className={`${darkMode ? "bg-[#121212]" : "bg-white"} pt-12`}>
         <LeftSidebar darkMode={darkMode} />
         <Content className="pt-10">
           <PageContent pagekey={navItems} darkMode={darkMode} />

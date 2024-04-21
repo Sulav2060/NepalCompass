@@ -2,7 +2,7 @@ import { StarOutlined, CheckCircleTwoTone } from "@ant-design/icons";
 import { Typography } from "antd";
 const { Paragraph, Title } = Typography;
 
-const RecommendationCard = ({ recommendation, reason }) => {
+const RecommendationCard = ({ recommendation }) => {
   return (
     <div className="border dark:border-blue-700 rounded-md p-4 dark:bg-gray-700 bg-blue-50">
       <Paragraph className="mb-0 dark:text-white text-gray-800">
@@ -17,12 +17,11 @@ const RecommendationCard = ({ recommendation, reason }) => {
             style={{ marginBottom: 0 }}
             className="dark:text-gray-200 text-gray-700"
           >
-            Our Recommendation:{" "}
-            <span style={{ fontWeight: 500, fontSize: "16px" }}></span>
+            Our Recommendation:
           </Title>
         </div>
         <div className="pl-8 ">
-          <Paragraph className="dark:text-gray-300 text-gray-700">
+          <Paragraph className="dark:text-gray-300 text-gray-700 font-normal">
             {recommendation}
           </Paragraph>
         </div>
