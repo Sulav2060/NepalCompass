@@ -3,6 +3,7 @@ import { Layout, Menu, Drawer, Button } from "antd";
 import { MailOutlined, MenuOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+import { FolderOutlined, FileTextOutlined } from "@ant-design/icons";
 
 const { Sider } = Layout;
 const { SubMenu } = Menu;
@@ -63,14 +64,14 @@ const LeftSidebar = () => {
       return (
         <SubMenu
           key={item.key}
-          icon={<MailOutlined />}
+          icon={<FolderOutlined />}
           title={item.label}
           onTitleClick={
             isMobile ? (e) => e.domEvent.stopPropagation() : undefined
           }
         >
           {item.children.map((child) => (
-            <Menu.Item key={child.key}>
+            <Menu.Item key={child.key} icon={<FileTextOutlined />}>
               <Link to={`/${child.key}`}>{child.label}</Link>
             </Menu.Item>
           ))}
@@ -78,7 +79,7 @@ const LeftSidebar = () => {
       );
     } else {
       return (
-        <Menu.Item key={item.key} icon={<MailOutlined />}>
+        <Menu.Item key={item.key} icon={<FileTextOutlined />}>
           <Link to={`/${item.key}`}>{item.label}</Link>
         </Menu.Item>
       );
@@ -104,17 +105,31 @@ const LeftSidebar = () => {
         onClose={onClose}
         visible={visible}
       >
-        <Menu defaultSelectedKeys={["1"]} mode="inline">
+        <Menu
+          defaultSelectedKeys={["1"]}
+          mode="inline"
+          defaultOpenKeys={[
+            "getting_started",
+            "sightseeing_activities",
+            "practical_info",
+          ]}
+        >
           {items.map(renderMenuItem)}
         </Menu>
       </Drawer>
     </div>
   ) : (
-    <Sider
-      width={275}
-      className="overflow-auto"
-    >
-      <Menu mode="inline" style={{ borderRight: 0 }}>
+    <Sider width={300} className="overflow-auto">
+      <Menu
+        mode="inline"
+        width={"100%"}
+        style={{ borderRight: 0 }}
+        defaultOpenKeys={[
+          "getting_started",
+          "sightseeing_activities",
+          "practical_info",
+        ]}
+      >
         {items.map(renderMenuItem)}
       </Menu>
     </Sider>

@@ -5,9 +5,12 @@ import RightSidebar from "../components/RightSidebar";
 import LeftSidebar from "../components/LeftSidebar";
 import Navbar from "../components/Navbar";
 import titletexts from "../data/titletexts.json";
-import { navigationItems } from '../data/NavigationItems';
+import { navigationItems } from "../data/NavigationItems";
 
-const PageTemplate = ({ contentComponent: ContentComponent, navTitle: navItems }) => {
+const PageTemplate = ({
+  contentComponent: ContentComponent,
+  navTitle: navItems,
+}) => {
   // used better approach
   // const navigationItems = [
   //   ///page ma vako title haru list garni
@@ -30,7 +33,7 @@ const PageTemplate = ({ contentComponent: ContentComponent, navTitle: navItems }
 
   return (
     <div
-      className={`grid grid-rows-[auto,1fr] grid-cols-[1fr,3fr,1fr] h-screen ${
+      className={`grid grid-rows-[auto,1fr] grid-cols-[1fr,3.5fr,.8fr] h-screen ${
         darkMode ? "dark" : ""
       }`}
     >
@@ -38,7 +41,7 @@ const PageTemplate = ({ contentComponent: ContentComponent, navTitle: navItems }
         <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
       </div>
       <div
-        className="row-start-2 col-span-1 mt-20 overflow-auto fixed"
+        className="row-start-2 col-span-1 mt-20 overflow-auto fixed "
         style={{
           maxHeight: "calc(100vh - 64px)",
           scrollbarWidth: "thin",
@@ -47,11 +50,11 @@ const PageTemplate = ({ contentComponent: ContentComponent, navTitle: navItems }
       >
         <LeftSidebar />
       </div>
-      <div className="row-start-2 col-start-2 col-span-1 mt-20">
+      <div className="row-start-2 pl-5 pr-5 col-start-2 col-span-1 mt-20 ">
         {ContentComponent}
       </div>
       <div
-        className="row-start-2 col-span-1 mt-20 fixed"
+        className="row-start-2 col-start-3 col-span-1 mt-20 fixed "
         style={{
           maxHeight: "calc(100vh - 64px)",
           scrollbarWidth: "thin",
@@ -60,12 +63,7 @@ const PageTemplate = ({ contentComponent: ContentComponent, navTitle: navItems }
       >
         {console.log("Page:", navItems)}
         {console.log("Titles:", titletexts[navItems]?.navigationItems)}
-        <RightSidebar
-          navigationItems={
-            titletexts[navItems]?.navigationItems
-          }
-        />
-    
+        <RightSidebar navigationItems={titletexts[navItems]?.navigationItems} />
       </div>
     </div>
   );

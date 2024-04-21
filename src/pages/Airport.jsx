@@ -1,10 +1,10 @@
-
 import React from "react";
 import { Row, Col, Anchor, Typography, Divider, Table } from "antd";
 import { StarOutlined } from "@ant-design/icons";
 import titletexts from "../data/titletexts.json";
 import tabletexts from "../data/tabletexts.json";
 import texts from "../data/texts.json";
+import RecommendationCard from "../components/ReccommendationCard";
 const { Link } = Anchor;
 const { Title, Paragraph } = Typography;
 
@@ -71,25 +71,11 @@ const Airport = () => {
                 </Paragraph>
               </Paragraph>
             </Paragraph>
-            <div className="border border-blue-300 rounded-md p-4 bg-gray-50">
-              <Paragraph className="mb-0">
-                <div className="flex items-center mb-2">
-                  <StarOutlined
-                    style={{
-                      fontSize: "24px",
-                      color: "#FFD700",
-                      marginRight: "8px",
-                    }}
-                  />
-                  <Title level={3} style={{ marginBottom: 0 }}>
-                    {airportTexts.sim.recommendation}
-                  </Title>
-                </div>
-                <div>
-                  <Paragraph>{airportTexts.sim.recommendationNote}</Paragraph>
-                </div>
-              </Paragraph>
-            </div>
+
+            <RecommendationCard
+              recommendation={airportTexts.sim.recommendation}
+              reason={airportTexts.sim.recommendationNote}
+            />
             <Divider />
             <Paragraph id="transport">
               <Title level={3}>{airportTexts.transport.title}</Title>

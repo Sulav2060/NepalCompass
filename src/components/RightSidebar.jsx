@@ -38,7 +38,7 @@ const RightSidebar = ({ navigationItems }) => {
     setVisible(false);
   };
   if (!navigationItems) {
-    return null; 
+    return null;
   }
 
   return isMobile ? (
@@ -76,7 +76,7 @@ const RightSidebar = ({ navigationItems }) => {
       </Drawer>
     </div>
   ) : (
-    <div className="fixed top-10vh right-0 h-full bg-white w-48 overflow-y-auto shadow">
+    <div className="fixed top-10vh right-0 h-full bg-white w-60 overflow-y-auto shadow">
       <ul>
         {navigationItems.map((item) => (
           <li
