@@ -8,25 +8,12 @@ import titletexts from "../data/titletexts.json";
 import { navigationItems } from '../data/NavigationItems';
 
 const PageTemplate = ({ contentComponent: ContentComponent, navTitle: navItems }) => {
-  // used better approach
-  // const navigationItems = [
-  //   ///page ma vako title haru list garni
-  //   //list all id(s) from the page
-  //   //eg
-  //   { id: "visa", title: "On Arrival Visa" },
-  //   { id: "currency", title: "Currency Exchange" },
-  //   { id: "sim", title: "SIM Card" },
-  //   { id: "recommendation", title: "Our Recommendation" },
-  // ];
+
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
   };
-
-  //for rightsidebar(titles)
-
-  // const navItems = navigationItems[ContentComponent] || [];
 
   return (
     <div
