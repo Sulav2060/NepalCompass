@@ -8,9 +8,6 @@ import NatureWildlife from "./pages/NatureWildlife";
 
 function App() {
   return (
-    ///ContentComponent changes based on the current route. So, when the route changes, the ContentComponent changes, but the component itself doesn't re-render.
-    //This is why the page needs to be refreshed to see the changes.
-    //pagetemplate vitra rerender garna parchha
     <Router>
       <div>
         <Routes>
@@ -19,7 +16,9 @@ function App() {
             element={
               <PageTemplate
                 contentComponent={<Airport />}
+                navTitle="Airport"
                 // navigationItems={Airport.navigationItems}
+                // passing the navigationItems as a prop to the PageTemplate component requires manual refresh of PageTemplate component when the route changes.
               />
             }
           />
@@ -28,6 +27,7 @@ function App() {
             element={
               <PageTemplate
                 contentComponent={<Airport />}
+                navTitle="Airport"
                 // navigationItems={Airport.navigationItems}
               />
             }
@@ -37,6 +37,7 @@ function App() {
             element={
               <PageTemplate
                 contentComponent={<Trekking />}
+                navTitle="Trekking"
                 // navigationItems={Trekking.navigationItems}
               />
             }
@@ -46,6 +47,7 @@ function App() {
             element={
               <PageTemplate
                 contentComponent={<SafetyHealth />}
+                navTitle="SafetyHealth"
                 // navigationItems={SafetyHealth.navigationItems}
               />
             }
@@ -55,6 +57,7 @@ function App() {
             element={
               <PageTemplate
                 contentComponent={<NatureWildlife />}
+                navTitle="NatureWildlife" 
                 // navigationItems={NatureWildlife.navigationItems}
               />
             }

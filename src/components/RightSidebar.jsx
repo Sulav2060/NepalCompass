@@ -11,6 +11,7 @@ const RightSidebar = ({ navigationItems }) => {
   useEffect(() => {
     const handleScroll = () => {
       const visibleItems = [];
+
       navigationItems.forEach((item) => {
         const element = document.getElementById(item.id);
         if (element) {
@@ -20,14 +21,15 @@ const RightSidebar = ({ navigationItems }) => {
           }
         }
       });
+
       setActiveItems(visibleItems);
     };
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [navigationItems]);
-
   const showDrawer = () => {
     setVisible(true);
   };
@@ -35,12 +37,11 @@ const RightSidebar = ({ navigationItems }) => {
   const onClose = () => {
     setVisible(false);
   };
-
   if (!navigationItems) {
-    return null;
+    return null; 
   }
 
-  return isMobile? (
+  return isMobile ? (
     <div>
       <Button
         type="primary"
@@ -62,7 +63,7 @@ const RightSidebar = ({ navigationItems }) => {
               id={item.id}
               className={`py-2 pl-4 border-l-4 ${
                 activeItems.includes(item.id)
-                 ? "border-blue-500 text-blue-500"
+                  ? "border-blue-500 text-blue-500"
                   : "border-transparent text-gray-700 hover:bg-gray-100"
               }`}
             >
@@ -83,7 +84,7 @@ const RightSidebar = ({ navigationItems }) => {
             id={item.id}
             className={`py-2 pl-4 border-l-4 ${
               activeItems.includes(item.id)
-               ? "border-blue-500 text-blue-500"
+                ? "border-blue-500 text-blue-500"
                 : "border-transparent text-gray-700 hover:bg-gray-100"
             }`}
           >

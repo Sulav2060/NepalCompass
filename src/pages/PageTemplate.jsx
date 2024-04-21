@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 import titletexts from "../data/titletexts.json";
 import { navigationItems } from '../data/NavigationItems';
 
-const PageTemplate = ({ contentComponent: ContentComponent }) => {
+const PageTemplate = ({ contentComponent: ContentComponent, navTitle: navItems }) => {
   // used better approach
   // const navigationItems = [
   //   ///page ma vako title haru list garni
@@ -25,8 +25,8 @@ const PageTemplate = ({ contentComponent: ContentComponent }) => {
   };
 
   //for rightsidebar(titles)
-  const componentName = ContentComponent; 
-  const navItems = navigationItems[componentName] || [];
+
+  // const navItems = navigationItems[ContentComponent] || [];
 
   return (
     <div
@@ -48,7 +48,6 @@ const PageTemplate = ({ contentComponent: ContentComponent }) => {
         <LeftSidebar />
       </div>
       <div className="row-start-2 col-start-2 col-span-2 mt-20">
-        {console.log("contentComponent:", ContentComponent)}
         {ContentComponent}
       </div>
       <div
@@ -59,17 +58,13 @@ const PageTemplate = ({ contentComponent: ContentComponent }) => {
           scrollbarColor: "rgba(0, 0, 0, 0.2) transparent",
         }}
       >
-        {console.log("this is being passed:", titletexts[ContentComponent.type.name]?.navigationItems)}
+        {console.log("Page:", navItems)}
+        {console.log("Titles:", titletexts[navItems]?.navigationItems)}
         <RightSidebar
           navigationItems={
-            titletexts[ContentComponent.type.name]?.navigationItems
+            titletexts[navItems]?.navigationItems
           }
         />
-        {console.log(
-          "content",
-          navItems
-        )}
-        {console.log("titletexts:", navigationItems)}
     
       </div>
     </div>
