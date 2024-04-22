@@ -5,6 +5,7 @@ import PageTemplate from "./pages/PageTemplate";
 import Trekking from "./pages/TrekkingHiking";
 import SafetyHealth from "./pages/SafetyHealth";
 import NatureWildlife from "./pages/NatureWildlife";
+import { useEffect, useState } from "react";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <PageTemplate
                 contentComponent={<Airport />}
                 navTitle="Airport"
+
                 // navigationItems={Airport.navigationItems}
               />
             }
@@ -57,7 +59,7 @@ function App() {
             element={
               <PageTemplate
                 contentComponent={<NatureWildlife />}
-                navTitle="NatureWildlife" 
+                navTitle="NatureWildlife"
                 // navigationItems={NatureWildlife.navigationItems}
               />
             }
