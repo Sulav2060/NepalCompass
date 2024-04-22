@@ -19,7 +19,7 @@ const Airport = () => {
     <div>
       <Row>
         <Col>
-          <div className="overflow-hidden">
+          <div>
             <Title level={2}>{airportTexts.title}</Title>
             <Paragraph id="visa">
               <Title level={3}>{airportTexts.visa.title}</Title>

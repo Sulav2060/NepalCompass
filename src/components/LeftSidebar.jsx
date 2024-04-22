@@ -119,9 +119,10 @@ const LeftSidebar = () => {
       </Drawer>
     </div>
   ) : (
-    <Sider width={300} className="overflow-auto">
+    <Sider width={"auto"} breakpoint="sm" expandBehaviour="overTheTop">
       <Menu
         mode="inline"
+        theme="dark"
         width={"100%"}
         style={{ borderRight: 0 }}
         defaultOpenKeys={[

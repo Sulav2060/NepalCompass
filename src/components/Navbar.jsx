@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "antd";
+import { Switch } from "antd";
 import { BulbOutlined, BulbFilled } from "@ant-design/icons";
 import { useMediaQuery } from "react-responsive";
 
@@ -47,13 +47,13 @@ const Navbar = ({ darkMode, toggleTheme }) => {
             </a>
           </div>
           <div>
-            <Button
-              className={`mr-4 ${darkMode ? "bg-black" : "bg-white"} text-${
-                darkMode ? "white" : "black"
-              } rounded-full p-2 hover:bg-blue-100`}
-              onClick={toggleTheme}
-              icon={darkMode ? <BulbFilled /> : <BulbOutlined />}
-            />
+          <Switch
+            className="theme-switch"
+            checked={darkMode}
+            onChange={toggleTheme}
+            checkedChildren="Dark"
+            unCheckedChildren="Light"
+          />
           </div>
         </div>
       </div>

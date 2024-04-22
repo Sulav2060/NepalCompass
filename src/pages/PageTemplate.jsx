@@ -11,29 +11,15 @@ const PageTemplate = ({
   contentComponent: ContentComponent,
   navTitle: navItems,
 }) => {
-  // used better approach
-  // const navigationItems = [
-  //   ///page ma vako title haru list garni
-  //   //list all id(s) from the page
-  //   //eg
-  //   { id: "visa", title: "On Arrival Visa" },
-  //   { id: "currency", title: "Currency Exchange" },
-  //   { id: "sim", title: "SIM Card" },
-  //   { id: "recommendation", title: "Our Recommendation" },
-  // ];
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
   };
-
-  //for rightsidebar(titles)
-
-  // const navItems = navigationItems[ContentComponent] || [];
-
+  
   return (
     <div
-      className={`grid grid-rows-[auto,1fr] grid-cols-[1fr,3.5fr,.8fr] h-screen ${
+      className={`grid grid-rows-[auto,1fr] grid-cols-[1fr,3.5fr,.8fr] ${
         darkMode ? "dark" : ""
       }`}
     >
@@ -41,7 +27,7 @@ const PageTemplate = ({
         <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
       </div>
       <div
-        className="row-start-2 col-span-1 mt-20 overflow-auto fixed "
+        className="row-start-2 col-start-1 col-span-1  mt-20 overflow-auto fixed "
         style={{
           maxHeight: "calc(100vh - 64px)",
           scrollbarWidth: "thin",
