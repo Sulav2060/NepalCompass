@@ -6,6 +6,7 @@ const PageTemplate = React.lazy(() => import("./pages/PageTemplate"));
 const Trekking = React.lazy(() => import("./pages/TrekkingHiking"));
 const SafetyHealth = React.lazy(() => import("./pages/SafetyHealth"));
 const NatureWildlife = React.lazy(() => import("./pages/NatureWildlife"));
+import { useEffect, useState } from "react";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <PageTemplate
                 contentComponent={<Airport />}
                 navTitle="Airport"
+
                 // navigationItems={Airport.navigationItems}
               />
             }
@@ -60,7 +62,7 @@ function App() {
             element={
               <PageTemplate
                 contentComponent={<NatureWildlife />}
-                navTitle="NatureWildlife" 
+                navTitle="NatureWildlife"
                 // navigationItems={NatureWildlife.navigationItems}
               />
             }

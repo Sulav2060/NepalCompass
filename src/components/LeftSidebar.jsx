@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { Layout, Menu, Drawer, Button } from "antd";
-import { MailOutlined, MenuOutlined } from "@ant-design/icons";
+import {
+  FolderOutlined,
+  FileTextOutlined,
+  MenuOutlined,
+} from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
 const { Sider } = Layout;
 const { SubMenu } = Menu;
 
-const LeftSidebar = () => {
+const LeftSidebar = ({ darkMode }) => {
   const [visible, setVisible] = useState(false);
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const items = [
@@ -63,14 +67,14 @@ const LeftSidebar = () => {
       return (
         <SubMenu
           key={item.key}
-          icon={<MailOutlined />}
+          icon={<FolderOutlined />}
           title={item.label}
           onTitleClick={
             isMobile ? (e) => e.domEvent.stopPropagation() : undefined
           }
         >
           {item.children.map((child) => (
-            <Menu.Item key={child.key}>
+            <Menu.Item key={child.key} icon={<FileTextOutlined />}>
               <Link to={`/${child.key}`}>{child.label}</Link>
             </Menu.Item>
           ))}
@@ -78,12 +82,13 @@ const LeftSidebar = () => {
       );
     } else {
       return (
-        <Menu.Item key={item.key} icon={<MailOutlined />}>
+        <Menu.Item key={item.key} icon={<FileTextOutlined />}>
           <Link to={`/${item.key}`}>{item.label}</Link>
         </Menu.Item>
       );
     }
   };
+
   const showDrawer = () => {
     setVisible(true);
   };
@@ -94,8 +99,8 @@ const LeftSidebar = () => {
 
   return isMobile ? (
     <div>
-      <Button type="primary" onClick={showDrawer}>
-        <MenuOutlined />
+      <Button type="primary" onClick={showDrawer} icon={<MenuOutlined />}>
+        Menu
       </Button>
       <Drawer
         title="Menu"
@@ -104,17 +109,51 @@ const LeftSidebar = () => {
         onClose={onClose}
         visible={visible}
       >
-        <Menu defaultSelectedKeys={["1"]} mode="inline">
+        <Menu
+          defaultSelectedKeys={["1"]}
+          mode="inline"
+          theme={darkMode ? "dark" : "light"} // Dark mode theme
+          defaultOpenKeys={[
+            "getting_started",
+            "sightseeing_activities",
+            "practical_info",
+          ]}
+        >
           {items.map(renderMenuItem)}
         </Menu>
       </Drawer>
     </div>
   ) : (
     <Sider
-      width={275}
-      className="overflow-auto"
+      width={"auto"}
+      style={{
+        overflow: "auto",
+        position: "sticky",
+        top: "10vh",
+        height: "90vh",
+        left: 0,
+        background: darkMode ? "#121212" : "#ffffff", // Dark mode background color
+        color: darkMode ? "#ffffff" : "#000000", // Dark mode text color
+      }}
+      breakpoint="md"
+      collapsedWidth={0}
+      theme={darkMode ? "dark" : "light"} // Dark mode theme
     >
-      <Menu mode="inline" style={{ borderRight: 0 }}>
+      <Menu
+        mode="inline"
+        style={{
+          position: "sticky",
+          left: 0,
+          background: darkMode ? "#121212" : "#ffffff", // Dark mode background color
+          color: darkMode ? "#ffffff" : "#000000", // Dark mode text color
+        }}
+        defaultOpenKeys={[
+          "getting_started",
+          "sightseeing_activities",
+          "practical_info",
+        ]}
+        theme={darkMode ? "dark" : "light"} // Dark mode theme
+      >
         {items.map(renderMenuItem)}
       </Menu>
     </Sider>
