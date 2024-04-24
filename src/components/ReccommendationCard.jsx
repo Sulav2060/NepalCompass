@@ -18,14 +18,12 @@ const RecommendationCard = ({ recommendation, reason }) => {
             className="dark:text-gray-200 text-gray-700"
           >
             Our Recommendation:{" "}
-            <span style={{ fontWeight: 500, fontSize: "16px" }}>
-              {recommendation}
-            </span>
+            <span style={{ fontWeight: 500, fontSize: "16px" }}></span>
           </Title>
         </div>
         <div className="pl-8 ">
           <Paragraph className="dark:text-gray-300 text-gray-700">
-            {reason}
+            {recommendation}
           </Paragraph>
         </div>
       </Paragraph>

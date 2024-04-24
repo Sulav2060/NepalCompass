@@ -3,9 +3,11 @@ import RightSidebar from "../components/RightSidebar";
 import LeftSidebar from "../components/LeftSidebar";
 import Navbar from "../components/Navbar";
 import titletexts from "../data/titletexts.json";
-import { Breadcrumb, Layout, Menu, theme } from "antd";
-const { Header, Content, Footer, Sider } = Layout;
+import { Layout } from "antd";
 import { useEffect } from "react";
+import PageContent from "../PageContent";
+
+const { Content } = Layout;
 
 const PageTemplate = ({
   contentComponent: ContentComponent,
@@ -14,6 +16,7 @@ const PageTemplate = ({
   const toggleTheme = () => {
     setDarkMode(!darkMode);
   };
+
   function getInitialDarkModePreference() {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -22,7 +25,9 @@ const PageTemplate = ({
       return window.matchMedia("(prefers-color-scheme: dark)").matches;
     }
   }
+
   const [darkMode, setDarkMode] = useState(getInitialDarkModePreference());
+
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -39,10 +44,11 @@ const PageTemplate = ({
       >
         <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
       </Layout>
-
-      <Layout className="dark:bg-[#121212] bg-white">
+      <Layout className={`${darkMode ? "bg-[#121212]" : "bg-white"}`}>
         <LeftSidebar darkMode={darkMode} />
-        <div className="pt-10">{ContentComponent}</div>
+        <Content className="pt-10">
+          <PageContent pagekey={navItems} darkMode={darkMode} />
+        </Content>
         <RightSidebar
           navigationItems={titletexts[navItems]?.navigationItems}
           darkMode={darkMode}
