@@ -1,12 +1,11 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-const Airport = React.lazy(() => import("./pages/Airport"));
-const NotFound = React.lazy(() => import("./pages/NotFound"));
-const PageTemplate = React.lazy(() => import("./pages/PageTemplate"));
-const Trekking = React.lazy(() => import("./pages/TrekkingHiking"));
-const SafetyHealth = React.lazy(() => import("./pages/SafetyHealth"));
-const NatureWildlife = React.lazy(() => import("./pages/NatureWildlife"));
-import { useEffect, useState } from "react";
+import Airport from "./pages/Airport";
+import NotFound from "./pages/NotFound";
+import PageTemplate from "./pages/PageTemplate";
+import Trekking from "./pages/TrekkingHiking";
+import SafetyHealth from "./pages/SafetyHealth";
+import NatureWildlife from "./pages/NatureWildlife";
 
 function App() {
   return (
