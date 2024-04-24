@@ -1,11 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Airport from "./pages/Airport";
 import NotFound from "./pages/NotFound";
 import PageTemplate from "./pages/PageTemplate";
-import Trekking from "./pages/TrekkingHiking";
-import SafetyHealth from "./pages/SafetyHealth";
-import NatureWildlife from "./pages/NatureWildlife";
-import { useEffect, useState } from "react";
+import PageContent from "./PageContent";
 
 function App() {
   return (
@@ -16,10 +12,8 @@ function App() {
             path="/"
             element={
               <PageTemplate
-                contentComponent={<Airport />}
+                contentComponent={<PageContent pagekey="Airport" />}
                 navTitle="Airport"
-                // navigationItems={Airport.navigationItems}
-                // passing the navigationItems as a prop to the PageTemplate component requires manual refresh of PageTemplate component when the route changes.
               />
             }
           />
@@ -27,10 +21,8 @@ function App() {
             path="/arriving/*"
             element={
               <PageTemplate
-                contentComponent={<Airport />}
+                contentComponent={<PageContent pagekey="Airport" />}
                 navTitle="Airport"
-
-                // navigationItems={Airport.navigationItems}
               />
             }
           />
@@ -38,9 +30,8 @@ function App() {
             path="/trekking/*"
             element={
               <PageTemplate
-                contentComponent={<Trekking />}
+                contentComponent={<PageContent pagekey="Trekking" />}
                 navTitle="Trekking"
-                // navigationItems={Trekking.navigationItems}
               />
             }
           />
@@ -48,9 +39,8 @@ function App() {
             path="/safety_health/*"
             element={
               <PageTemplate
-                contentComponent={<SafetyHealth />}
+                contentComponent={<PageContent pagekey="SafetyHealth" />}
                 navTitle="SafetyHealth"
-                // navigationItems={SafetyHealth.navigationItems}
               />
             }
           />
@@ -58,9 +48,8 @@ function App() {
             path="/nature_wildlife/*"
             element={
               <PageTemplate
-                contentComponent={<NatureWildlife />}
+                contentComponent={<PageContent pagekey="NatureWildlife" />}
                 navTitle="NatureWildlife"
-                // navigationItems={NatureWildlife.navigationItems}
               />
             }
           />

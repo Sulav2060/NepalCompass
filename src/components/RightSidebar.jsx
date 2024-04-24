@@ -13,10 +13,15 @@ const RightSidebar = ({ navigationItems, darkMode }) => {
       const visibleItems = [];
 
       navigationItems.forEach((item) => {
-        const element = document.getElementById(item.id);
+        const sectionId = `section-${item.id}`;
+        const element = document.getElementById(sectionId);
         if (element) {
           const { top, bottom } = element.getBoundingClientRect();
-          if (top >= 0 && bottom <= window.innerHeight) {
+          const isVisible =
+            top >= 0 &&
+            bottom <=
+              (window.innerHeight || document.documentElement.clientHeight);
+          if (isVisible) {
             visibleItems.push(item.id);
           }
         }
@@ -24,8 +29,10 @@ const RightSidebar = ({ navigationItems, darkMode }) => {
 
       setActiveItems(visibleItems);
     };
+
     handleScroll();
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -74,7 +81,7 @@ const RightSidebar = ({ navigationItems, darkMode }) => {
               }`}
               style={{ cursor: "pointer" }}
             >
-              <a href={`#${item.id}`} className="sidebar-link">
+              <a href={`#section-${item.id}`} className="sidebar-link">
                 {item.title}
               </a>
             </li>
@@ -104,7 +111,7 @@ const RightSidebar = ({ navigationItems, darkMode }) => {
             }`}
             style={{ cursor: "pointer" }}
           >
-            <a href={`#${item.id}`} className="sidebar-link">
+            <a href={`#section-${item.id}`} className="sidebar-link">
               {item.title}
             </a>
           </li>
