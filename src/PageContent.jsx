@@ -1,6 +1,6 @@
 import React from "react";
 import data from "./data/texts.json";
-import tabletexts from "./data/tabletexts.json";
+import tableData from "./data/tabletexts.json";
 import { Typography, Card } from "antd";
 import RecommendationCard from "./components/ReccommendationCard";
 import { useRef } from "react";
@@ -14,39 +14,25 @@ const PageContent = ({ pagekey }) => {
   const pageData = data[pagekey];
 
   if (!pageData) {
-    return <div>Page not found</div>;
+    return <div>Section not found</div>;
   }
 
-  const getTableData = (sectionId) => {
-    console.log("Section ID:", sectionId);
+  const renderTable = (section) => {
+    const tableConfig = tableData[pagekey]?.[section.id];
+    if (tableConfig && tableConfig.dataSource && tableConfig.columns) {
+      console.log("pagekey:", pagekey);
+      console.log("Section ID:", section.id);
+      console.log("tableConfig:", tableConfig);
+      console.log("Table Data source:", tableConfig.dataSource);
+      console.log("Table Data columns:", tableConfig.columns);
 
-    const tableData = tabletexts[pagekey];
-    if (tableData) {
-      switch (
-        sectionId // Use normalizedSectionId for comparison
-      ) {
-        case "visa":
-          return {
-            dataSource: tableData.visaDataSource,
-            columns: tableData.visaColumns,
-          };
-        case "emergencyNumbers":
-          return {
-            dataSource: tableData.emergencyNumbersDataSource,
-            columns: tableData.emergencyNumbersColumns,
-          };
-        case "trekking":
-          return {
-            dataSource: tableData.trekkingDataSource,
-            columns: tableData.trekkingColumns,
-          };
-        default:
-          return null;
-      }
+      return {
+        dataSource: tableConfig.dataSource,
+        columns: tableConfig.columns,
+      };
     }
     return null;
   };
-
   const handleSectionRef = (id, node) => {
     if (node) {
       sectionRefs.current[id] = node;
@@ -90,10 +76,15 @@ const PageContent = ({ pagekey }) => {
             )}
           </Paragraph>
           <Paragraph>
-            {getTableData(section.id) && (
-              <Table data={getTableData(section.id)} />
+            {renderTable(section) && (
+              <Table data={renderTable(section)} />
             )}
           </Paragraph>
+          {section.recommendation && (
+            <Paragraph className="font-bold text-gray-800 dark:text-gray-300">
+              <RecommendationCard recommendation={section.recommendation} />
+            </Paragraph>
+          )}
           {section.recommendation && (
             <Paragraph className="font-bold text-gray-800 dark:text-gray-300">
               <RecommendationCard recommendation={section.recommendation} />
