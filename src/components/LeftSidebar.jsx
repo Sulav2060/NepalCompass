@@ -14,53 +14,59 @@ const { SubMenu } = Menu;
 const LeftSidebar = ({ darkMode }) => {
   const [visible, setVisible] = useState(false);
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const items = useMemo(() => [
-    {
-      label: "Welcome to Nepal",
-      key: "arriving",
-    },
-    {
-      label: "Getting Started",
-      key: "getting_started",
-      children: [
-        { label: "Arriving in Nepal", key: "arriving" },
-        { label: "Accommodation", key: "accommodation" },
-      ],
-    },
-    {
-      label: "Food and Drink",
-      key: "food_and_drink",
-    },
-    {
-      label: "Transportation",
-      key: "transportation",
-    },
-    {
-      label: "Sightseeing and Activities",
-      key: "sightseeing_activities",
-      children: [
-        { label: "Trekking", key: "trekking" },
-        { label: "Adventure Sports", key: "adventure_sports" },
-        { label: "Cultural Experiences", key: "cultural_experiences" },
-        { label: "Nature and Wildlife", key: "nature_wildlife" },
-      ],
-    },
-    {
-      label: "Shopping",
-      key: "shopping",
-    },
-    {
-      label: "Practical Information",
-      key: "practical_info",
-      children: [
-        { label: "Safety and Health", key: "safety_health" },
-        { label: "Money Matters", key: "money_matters" },
-        { label: "Local Etiquette and Customs", key: "etiquette_customs" },
-        { label: "Language and Communication", key: "language_communication" },
-        { label: "Travel Tips and Resources", key: "travel_tips" },
-      ],
-    },
-  ], []);
+  const items = useMemo(
+    () => [
+      {
+        label: "Welcome to Nepal",
+        key: "arriving",
+      },
+      {
+        label: "Getting Started",
+        key: "getting_started",
+        children: [
+          { label: "Arriving in Nepal", key: "arriving" },
+          { label: "Accommodation", key: "accommodation" },
+        ],
+      },
+      {
+        label: "Food and Drink",
+        key: "food_and_drink",
+      },
+      {
+        label: "Transportation",
+        key: "transportation",
+      },
+      {
+        label: "Sightseeing and Activities",
+        key: "sightseeing_activities",
+        children: [
+          { label: "Trekking", key: "trekking" },
+          { label: "Adventure Sports", key: "adventure_sports" },
+          { label: "Cultural Experiences", key: "cultural_experiences" },
+          { label: "Nature and Wildlife", key: "nature_wildlife" },
+        ],
+      },
+      {
+        label: "Shopping",
+        key: "shopping",
+      },
+      {
+        label: "Practical Information",
+        key: "practical_info",
+        children: [
+          { label: "Safety and Health", key: "safety_health" },
+          { label: "Money Matters", key: "money_matters" },
+          { label: "Local Etiquette and Customs", key: "etiquette_customs" },
+          {
+            label: "Language and Communication",
+            key: "language_communication",
+          },
+          { label: "Travel Tips and Resources", key: "travel_tips" },
+        ],
+      },
+    ],
+    []
+  );
 
   const renderMenuItem = (item) => {
     if (item.children) {
@@ -97,7 +103,10 @@ const LeftSidebar = ({ darkMode }) => {
     setVisible(false);
   };
 
-  const defaultSelectedKey = useMemo(() => items.length > 0 ? items[0].key : null, [items]);
+  const defaultSelectedKey = useMemo(
+    () => (items.length > 0 ? items[0].key : null),
+    [items]
+  );
 
   return isMobile ? (
     <div>

@@ -76,9 +76,7 @@ const PageContent = ({ pagekey }) => {
             )}
           </Paragraph>
           <Paragraph>
-            {renderTable(section) && (
-              <Table data={renderTable(section)} />
-            )}
+            {renderTable(section) && <Table data={renderTable(section)} />}
           </Paragraph>
           {section.recommendation && (
             <Paragraph className="font-bold text-gray-800 dark:text-gray-300">

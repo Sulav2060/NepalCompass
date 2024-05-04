@@ -1,114 +1,113 @@
 {
-    "Airport": {
-      "title": "Airport",
-      "sections": [
-        {
-          "id": "visa",
-          "title": "On Arrival Visa",
-          "points": [
-            "Visa-on-arrival facility available for most nationalities.",
-            "Visa fees:"
-          ],
-          "recommendation": "Fill the form online and come and pay here in Nepal which will cost you:",
-          "note": "Note: Indian currency isn’t accepted at the visa pay counter."
-        },
-        {
-          "id": "currency",
-          "title": "Currency Exchange",
-          "points": [
-            "Currency exchange available at airport.",
-            "Better rates at ATMs in capital."
-          ]
-        },
-        {
-          "id": "sim",
-          "title": "SIM Card",
-          "points": [
-            "Local SIM card providers: NCell, NTC, Smart Cell.",
-            "NCell and NTC recommended for better coverage.",
-            "Smart Cell ideal for urban areas."
-          ],
-          "requirements": "Requirements: Passport size photo (if you don’t have, don’t worry, the airport will set you up for a minimal charge)",
-          "note": "Note: 100 NRS for a SIM outside the airport itself, and additional data costs may vary according to the provider. (All the rates you see at the airport are for data and don’t include the SIM.)",
-          
-          "recommendation": "NCELL! Faster data compared to NTC. Ideal for travelers needing reliable internet connectivity throughout their journey."
-        },
-        {
-          "id": "transport",
-          "title": "Transport",
-          "points": [
-            "Use \"Pathau\" in KTM and \"In-Drive\" in PKR",
-            "If wanna use local taxi, get outside Airport for better price as there is high parking fee in Airport"
-          ],
-          "recommendation": "Our Recommendation: Use app for easier and smoother experience as bargaining is not involved."
-        }
-      ]
-    },
-    "NatureWildlife": {
-      "title": "Nature and Wildlife in Nepal",
-      "sections": [
-        {
-          "id": "chitwan",
-          "title": "Chitwan National Park",
-          "description": [
-            "Chitwan National Park, a UNESCO World Heritage Site, is a premier destination for wildlife viewing in Nepal. This lush subtropical park is home to endangered species like the one-horned rhinoceros, Bengal tiger, sloth bear, and numerous species of birds and reptiles.",
-            "Visitors can embark on thrilling jungle safaris, canoe rides, and nature walks to spot these magnificent creatures in their natural habitats."
-          ]
-        },
-        {
-          "id": "bardia",
-          "title": "Bardia National Park",
-          "description": [
-            "Bardia National Park, located in western Nepal, is another haven for wildlife enthusiasts. This lesser-known park boasts rich biodiversity, including tigers, elephants, gharials (fish-eating crocodiles), and over 500 species of birds.",
-            "Guided jungle walks, elephant safaris, and jeep tours offer unique opportunities to explore this pristine wilderness."
-          ]
-        },
-        {
-          "id": "uppermustang",
-          "title": "Upper Mustang",
-          "description": [
-            "For those seeking a taste of the ancient Himalayan kingdom, Upper Mustang is a must-visit destination. This remote region, once a restricted area, is known for its arid landscapes, ancient monasteries, and unique blend of Tibetan and Nepali cultures.",
-            "Visitors can embark on guided treks, experiencing the hospitality of the Mustang people and witnessing their traditional way of life. Permits are required to visit Upper Mustang, and the cost and process may vary."
-          ]
-        },
-        {
-          "id": "rara",
-          "title": "Rara Lake",
-          "description": [
-            "Rara Lake, nestled in the far northwestern corner of Nepal, is a natural wonder like no other. This pristine freshwater lake, surrounded by towering peaks and alpine meadows, is a trekker's paradise and a serene escape from the bustling cities.",
-            "Visitors can camp by the lake, hike through the surrounding trails, and immerse themselves in the tranquility of this remote and unspoiled region."
-          ]
-        }
-      ]
-    },
-    "Trekking": {
-      "title": "Trekking in Nepal",
-      "sections": [
-        {
-          "id": "everest",
-          "title": "Everest Base Camp Trek",
-          "description": "A legendary trek to the base of the world's highest peak, Mt. Everest. The journey takes approximately 12-14 days, offering breathtaking views and high-altitude challenges."
-        },
-        {
-          "id": "annapurna",
-          "title": "Annapurna Circuit Trek",
-          "description": "A classic trek circumnavigating the Annapurna massif. Takes around 15-20 days, passing through diverse landscapes and high-altitude passes."
-        },
-        {
-          "id": "langtang",
-          "title": "Langtang Valley Trek",
-          "description": "A beautiful trek in the Langtang region, known for its cultural richness and scenic beauty. It typically lasts 7-10 days, offering moderate difficulty."
-        },
-        {
-          "id": "ghorepani",
-          "title": "Ghorepani Poon Hill Trek",
-          "description": "A shorter trek renowned for its stunning sunrise views from Poon Hill. Lasts 4-6 days and offers a moderate trekking experience."
-        }
-      ]
-    },
-    "Accommodation": {
-      "title": "Accommodation",
-      "sections": [
+  "Airport": {
+    "title": "Airport",
+    "sections": [
+      {
+        "id": "visa",
+        "title": "On Arrival Visa",
+        "points": [
+          "Visa-on-arrival facility available for most nationalities.",
+          "Visa fees:"
+        ],
+        "recommendation": "Fill the form online and come and pay here in Nepal which will cost you:",
+        "note": "Note: Indian currency isn’t accepted at the visa pay counter."
+      },
+      {
+        "id": "currency",
+        "title": "Currency Exchange",
+        "points": [
+          "Currency exchange available at airport.",
+          "Better rates at ATMs in capital."
+        ]
+      },
+      {
+        "id": "sim",
+        "title": "SIM Card",
+        "points": [
+          "Local SIM card providers: NCell, NTC, Smart Cell.",
+          "NCell and NTC recommended for better coverage.",
+          "Smart Cell ideal for urban areas."
+        ],
+        "requirements": "Requirements: Passport size photo (if you don’t have, don’t worry, the airport will set you up for a minimal charge)",
+        "note": "Note: 100 NRS for a SIM outside the airport itself, and additional data costs may vary according to the provider. (All the rates you see at the airport are for data and don’t include the SIM.)",
+        "recommendation": "NCELL! Faster data compared to NTC. Ideal for travelers needing reliable internet connectivity throughout their journey."
+      },
+      {
+        "id": "transport",
+        "title": "Transport",
+        "points": [
+          "Use \"Pathau\" in KTM and \"In-Drive\" in PKR",
+          "If wanna use local taxi, get outside Airport for better price as there is high parking fee in Airport"
+        ],
+        "recommendation": "Our Recommendation: Use app for easier and smoother experience as bargaining is not involved."
+      }
+    ]
+  },
+  "NatureWildlife": {
+    "title": "Nature and Wildlife in Nepal",
+    "sections": [
+      {
+        "id": "chitwan",
+        "title": "Chitwan National Park",
+        "description": [
+          "Chitwan National Park, a UNESCO World Heritage Site, is a premier destination for wildlife viewing in Nepal. This lush subtropical park is home to endangered species like the one-horned rhinoceros, Bengal tiger, sloth bear, and numerous species of birds and reptiles.",
+          "Visitors can embark on thrilling jungle safaris, canoe rides, and nature walks to spot these magnificent creatures in their natural habitats."
+        ]
+      },
+      {
+        "id": "bardia",
+        "title": "Bardia National Park",
+        "description": [
+          "Bardia National Park, located in western Nepal, is another haven for wildlife enthusiasts. This lesser-known park boasts rich biodiversity, including tigers, elephants, gharials (fish-eating crocodiles), and over 500 species of birds.",
+          "Guided jungle walks, elephant safaris, and jeep tours offer unique opportunities to explore this pristine wilderness."
+        ]
+      },
+      {
+        "id": "uppermustang",
+        "title": "Upper Mustang",
+        "description": [
+          "For those seeking a taste of the ancient Himalayan kingdom, Upper Mustang is a must-visit destination. This remote region, once a restricted area, is known for its arid landscapes, ancient monasteries, and unique blend of Tibetan and Nepali cultures.",
+          "Visitors can embark on guided treks, experiencing the hospitality of the Mustang people and witnessing their traditional way of life. Permits are required to visit Upper Mustang, and the cost and process may vary."
+        ]
+      },
+      {
+        "id": "rara",
+        "title": "Rara Lake",
+        "description": [
+          "Rara Lake, nestled in the far northwestern corner of Nepal, is a natural wonder like no other. This pristine freshwater lake, surrounded by towering peaks and alpine meadows, is a trekker's paradise and a serene escape from the bustling cities.",
+          "Visitors can camp by the lake, hike through the surrounding trails, and immerse themselves in the tranquility of this remote and unspoiled region."
+        ]
+      }
+    ]
+  },
+  "Trekking": {
+    "title": "Trekking in Nepal",
+    "sections": [
+      {
+        "id": "everest",
+        "title": "Everest Base Camp Trek",
+        "description": "A legendary trek to the base of the world's highest peak, Mt. Everest. The journey takes approximately 12-14 days, offering breathtaking views and high-altitude challenges."
+      },
+      {
+        "id": "annapurna",
+        "title": "Annapurna Circuit Trek",
+        "description": "A classic trek circumnavigating the Annapurna massif. Takes around 15-20 days, passing through diverse landscapes and high-altitude passes."
+      },
+      {
+        "id": "langtang",
+        "title": "Langtang Valley Trek",
+        "description": "A beautiful trek in the Langtang region, known for its cultural richness and scenic beauty. It typically lasts 7-10 days, offering moderate difficulty."
+      },
+      {
+        "id": "ghorepani",
+        "title": "Ghorepani Poon Hill Trek",
+        "description": "A shorter trek renowned for its stunning sunrise views from Poon Hill. Lasts 4-6 days and offers a moderate trekking experience."
+      }
+    ]
+  },
+  "Accommodation": {
+    "title": "Accommodation",
+    "sections": [
       {
         "id": "hotels",
         "title": "Hotels",
@@ -124,213 +123,211 @@
         "title": "Tea Houses",
         "description": "During treks, tea houses serve as basic accommodation options. These are simple lodges that provide meals and a place to sleep. They are a popular choice among trekkers."
       }
-      ]
-    },
-    "FoodAndDrink": {
-      "title": "Food and Drink in Nepal",
-      "sections": [
-        {
-          "id": "localCuisine",
-          "title": "Local Cuisine",
-          "description": "Nepali cuisine is diverse and flavorful, with influences from Indian, Tibetan, and other Asian cuisines. Don't miss out on trying traditional dishes like momo (dumplings), dal bhat (rice and lentils), and gundruk (fermented leafy greens)."
-        },
-        {
-          "id": "streetFood",
-          "title": "Street Food",
-          "description": "Exploring the street food scene in Nepal is a must for food enthusiasts. From savory snacks like samosas and pakoras to sweet treats like jalebi and lassi, there's something to satisfy every palate."
-        },
-        {
-          "id": "localDrinks",
-          "title": "Local Drinks",
-          "description": "Quench your thirst with refreshing local drinks like chiya (Nepali tea), lassi (yogurt-based drink), and tongba (fermented millet beer). For those looking for something stronger, try the local rice wine called raksi."
-        }
-      ]
-    },
-    "Transportation": {
-      "title": "Transportation in Nepal",
-      "sections": [
-        {
-          "id": "publicTransport",
-          "title": "Public Transport",
-          "description": "Public buses and microvans are the most common modes of transportation for getting around Nepal. They are affordable but can be crowded and uncomfortable. Private taxis and hired vehicles are also available for more convenience."
-        },
-        {
-          "id": "domesticFlights",
-          "title": "Domestic Flights",
-          "description": "For long-distance travel within Nepal, domestic flights are a popular option. They offer a quicker and more comfortable way to reach remote destinations like Pokhara, Lukla, and Jomsom."
-        },
-        {
-          "id": "rentalServices",
-          "title": "Rental Services",
-          "description": "Renting a car, motorcycle, or bicycle is a convenient way to explore Nepal at your own pace. However, be aware of the traffic conditions and road safety standards before opting for this mode of transportation."
-        }
-      ]
-    },
-    "AdventureSports": {
-      "title": "Adventure Sports in Nepal",
-      "sections": [
-        {
-          "id": "whiteWaterRafting",
-          "title": "White Water Rafting",
-          "description": "Nepal is renowned for its thrilling white water rafting experiences. The country's rivers offer a range of difficulty levels, making it suitable for both beginners and experienced rafters. Trishuli River, Seti River, and Bhote Koshi River are popular rafting destinations."
-        },
-        {
-          "id": "paragliding",
-          "title": "Paragliding",
-          "description": "Soar through the skies and enjoy breathtaking views of Nepal's landscapes with paragliding. Pokhara and Kathmandu Valley are popular paragliding spots, offering tandem flights for both beginners and experienced paragliders."
-        },
-        {
-          "id": "bungeeJumping",
-          "title": "Bungee Jumping",
-          "description": "Experience an adrenaline rush with bungee jumping in Nepal. The country is home to one of the world's highest bungee jumps, located near the Nepal-Tibet border. Take the leap and enjoy the thrill of freefalling amidst stunning natural surroundings."
-        }
-      ]
-    },
-    "CulturalExperiences": {
-      "title": "Cultural Experiences in Nepal",
-      "sections": [
-        {
-          "id": "heritageSites",
-          "title": "Heritage Sites",
-          "description": "Nepal is rich in cultural heritage, with numerous UNESCO World Heritage Sites. Explore ancient temples, palaces, and monasteries in Kathmandu Valley, Bhaktapur, and Patan. Don't miss the iconic Pashupatinath Temple, Boudhanath Stupa, and Swayambhunath Stupa."
-        },
-        {
-          "id": "festivals",
-          "title": "Festivals",
-          "description": "Experience the vibrant culture of Nepal by participating in local festivals. From the colorful Holi festival to the spiritual celebration of Dashain and Tihar, these festivals offer a glimpse into the country's traditions, rituals, and lively atmosphere."
-        },
-        {
-          "id": "homestayExperience",
-          "title": "Homestay Experience",
-          "description": "Immerse yourself in the local culture by staying with a Nepali family in a homestay. This allows you to learn about their daily life, traditions, and customs firsthand. It's a unique opportunity to forge meaningful connections and gain a deeper understanding of Nepali culture."
-        }
-      ]
-    },
-    "Shopping": {
-      "title": "Shopping in Nepal",
-      "sections": [
-        {
-          "id": "souvenirs",
-          "title": "Souvenirs",
-          "description": "Take home a piece of Nepal with unique souvenirs like handicrafts, traditional clothing, and jewelry. Explore the bustling markets of Kathmandu, Bhaktapur, and Pokhara to find a wide range of authentic Nepali products."
-        },
-        {
-          "id": "thangkaPaintings",
-          "title": "Thangka Paintings",
-          "description": "Thangka paintings are intricate Buddhist artworks that depict deities, mandalas, and religious scenes. These hand-painted masterpieces make for meaningful and culturally significant souvenirs. Look for authentic thangka paintings in art galleries and handicraft stores."
-        },
-        {
-          "id": "localMarkets",
-          "title": "Local Markets",
-          "description": "Explore the vibrant local markets of Nepal to experience the country's lively atmosphere and discover unique products. From fresh produce and spices to handmade crafts and clothing, these markets offer a glimpse into the local way of life."
-        }
-      ]
-    },
-    "SafetyHealth": {
-      "title": "Safety and Health in Nepal",
-      "sections": [
-        {
-          "id": "emergencyNumbers",
-          "title": "Emergency Numbers",
-          "description": "It's important to be aware of the emergency contact numbers in Nepal. Save the local police, ambulance, and tourist police numbers in case of any emergencies or safety concerns."
-        },
-        {
-          "id": "travelInsurance",
-          "title": "Travel Insurance",
-          "description": "Having travel insurance is highly recommended when visiting Nepal. It provides coverage for medical emergencies, trip cancellations, and other unforeseen events. Make sure to choose a policy that includes activities like trekking and adventure sports."
-        },
-        {
-          "id": "altitudeSickness",
-          "title": "Altitude Sickness",
-          "description": "Altitude sickness can be a concern when trekking in Nepal's high-altitude regions. It's important to acclimatize properly, stay hydrated, and be aware of the symptoms of altitude sickness. Descend to lower altitudes if experiencing severe symptoms."
-        },
-        {
-          "id": "healthPrecautions",
-          "title": "Health Precautions",
-          "description": "Take necessary health precautions when visiting Nepal. This includes getting vaccinated for diseases like hepatitis A, typhoid, and others as recommended by a travel health professional. It's also important to practice good hygiene and drink safe, bottled water."
-        }
-      ]
-    },
-    "MoneyMatters": {
-      "title": "Money Matters in Nepal",
-      "sections": [
-        {
-          "id": "currencyExchange",
-          "title": "Currency Exchange",
-          "description": "The official currency of Nepal is the Nepalese Rupee (NPR). Currency exchange services are available at banks, exchange counters, and authorized money changers. It's advisable to exchange currency at authorized places to ensure fair rates."
-        },
-        {
-          "id": "creditCards",
-          "title": "Credit Cards and ATMs",
-          "description": "Major credit cards like Visa and Mastercard are widely accepted in hotels, restaurants, and larger establishments in Nepal. ATMs are also available in cities and tourist areas, allowing you to withdraw cash in the local currency."
-        },
-        {
-          "id": "bargaining",
-          "title": "Bargaining",
-          "description": "Bargaining is a common practice in Nepal, especially in markets and smaller shops. Feel free to negotiate the price when buying souvenirs or other goods, but remember to do so respectfully and with a friendly attitude."
-        }
-      ]
-    },
-    "EtiquetteCustoms": {
-      "title": "Etiquette and Customs in Nepal",
-      "sections": [
-        {
-          "id": "greetings",
-          "title": "Greetings",
-          "description": "In Nepal, greetings are an important part of the culture. Use the traditional greeting \"Namaste\" with a slight bow and palms pressed together. It's a sign of respect and goodwill."
-        },
-        {
-          "id": "dressCode",
-          "title": "Dress Code",
-          "description": "When visiting religious sites and rural areas, it's advisable to dress modestly and respectfully. Avoid wearing revealing clothing and opt for conservative attire, especially for women."
-        },
-        {
-          "id": "customsAndTraditions",
-          "title": "Customs and Traditions",
-          "description": "Respect the customs and traditions of Nepal during your visit. Be mindful of local customs, such as removing your shoes before entering temples and monasteries, and seek permission before taking photographs of people or religious sites."
-        }
-      ]
-    },
-    "LanguageCommunication": {
-      "title": "Language and Communication in Nepal",
-      "sections": [
-        {
-          "id": "officialLanguage",
-          "title": "Official Language",
-          "description": "The official language of Nepal is Nepali. However, English is widely spoken, especially in tourist areas, hotels, and restaurants. Learning a few basic Nepali phrases can be helpful and appreciated by the locals."
-        },
-        {
-          "id": "localEtiquette",
-          "title": "Local Etiquette",
-          "description": "When communicating with locals, it's important to be polite and respectful. Use formal language and avoid using offensive or disrespectful words. Nepali people are known for their hospitality, so reciprocate their kindness and show gratitude."
-        },
-        {
-          "id": "translationServices",
-          "title": "Translation Services",
-          "description": "If you need assistance with language barriers, translation services are available in Nepal. You can hire professional translators or use translation apps to facilitate communication."
-        }
-      ]
-    },
-    "TravelTips": {
-      "title": "Travel Tips for Nepal",
-      "sections": [
-        {
-          "id": "seasonalConsiderations",
-          "title": "Seasonal Considerations",
-          "description": "Nepal experiences distinct seasons, each offering unique experiences. Consider the weather and climate when planning your trip. The peak tourist seasons are spring (March to May) and autumn (September to November), when the weather is pleasant and stable."
-        },
-        {
-          "id": "powerAdapters",
-          "title": "Power Adapters",
-          "description": "Nepal uses Type C and Type D power outlets. If your devices have different plug types, it's advisable to bring a universal power adapter to ensure compatibility."
-        },
-        {
-          "id": "respectingLocalCulture",
-          "title": "Respecting Local Culture",
-          "description": "Respect the local culture and traditions of Nepal. Seek permission before entering religious sites, dress modestly, and be mindful of local customs and practices. Remember to remove your shoes before entering temples and monasteries."
-        }
-      ]
-    }
-
+    ]
+  },
+  "FoodAndDrink": {
+    "title": "Food and Drink in Nepal",
+    "sections": [
+      {
+        "id": "localCuisine",
+        "title": "Local Cuisine",
+        "description": "Nepali cuisine is diverse and flavorful, with influences from Indian, Tibetan, and other Asian cuisines. Don't miss out on trying traditional dishes like momo (dumplings), dal bhat (rice and lentils), and gundruk (fermented leafy greens)."
+      },
+      {
+        "id": "streetFood",
+        "title": "Street Food",
+        "description": "Exploring the street food scene in Nepal is a must for food enthusiasts. From savory snacks like samosas and pakoras to sweet treats like jalebi and lassi, there's something to satisfy every palate."
+      },
+      {
+        "id": "localDrinks",
+        "title": "Local Drinks",
+        "description": "Quench your thirst with refreshing local drinks like chiya (Nepali tea), lassi (yogurt-based drink), and tongba (fermented millet beer). For those looking for something stronger, try the local rice wine called raksi."
+      }
+    ]
+  },
+  "Transportation": {
+    "title": "Transportation in Nepal",
+    "sections": [
+      {
+        "id": "publicTransport",
+        "title": "Public Transport",
+        "description": "Public buses and microvans are the most common modes of transportation for getting around Nepal. They are affordable but can be crowded and uncomfortable. Private taxis and hired vehicles are also available for more convenience."
+      },
+      {
+        "id": "domesticFlights",
+        "title": "Domestic Flights",
+        "description": "For long-distance travel within Nepal, domestic flights are a popular option. They offer a quicker and more comfortable way to reach remote destinations like Pokhara, Lukla, and Jomsom."
+      },
+      {
+        "id": "rentalServices",
+        "title": "Rental Services",
+        "description": "Renting a car, motorcycle, or bicycle is a convenient way to explore Nepal at your own pace. However, be aware of the traffic conditions and road safety standards before opting for this mode of transportation."
+      }
+    ]
+  },
+  "AdventureSports": {
+    "title": "Adventure Sports in Nepal",
+    "sections": [
+      {
+        "id": "whiteWaterRafting",
+        "title": "White Water Rafting",
+        "description": "Nepal is renowned for its thrilling white water rafting experiences. The country's rivers offer a range of difficulty levels, making it suitable for both beginners and experienced rafters. Trishuli River, Seti River, and Bhote Koshi River are popular rafting destinations."
+      },
+      {
+        "id": "paragliding",
+        "title": "Paragliding",
+        "description": "Soar through the skies and enjoy breathtaking views of Nepal's landscapes with paragliding. Pokhara and Kathmandu Valley are popular paragliding spots, offering tandem flights for both beginners and experienced paragliders."
+      },
+      {
+        "id": "bungeeJumping",
+        "title": "Bungee Jumping",
+        "description": "Experience an adrenaline rush with bungee jumping in Nepal. The country is home to one of the world's highest bungee jumps, located near the Nepal-Tibet border. Take the leap and enjoy the thrill of freefalling amidst stunning natural surroundings."
+      }
+    ]
+  },
+  "CulturalExperiences": {
+    "title": "Cultural Experiences in Nepal",
+    "sections": [
+      {
+        "id": "heritageSites",
+        "title": "Heritage Sites",
+        "description": "Nepal is rich in cultural heritage, with numerous UNESCO World Heritage Sites. Explore ancient temples, palaces, and monasteries in Kathmandu Valley, Bhaktapur, and Patan. Don't miss the iconic Pashupatinath Temple, Boudhanath Stupa, and Swayambhunath Stupa."
+      },
+      {
+        "id": "festivals",
+        "title": "Festivals",
+        "description": "Experience the vibrant culture of Nepal by participating in local festivals. From the colorful Holi festival to the spiritual celebration of Dashain and Tihar, these festivals offer a glimpse into the country's traditions, rituals, and lively atmosphere."
+      },
+      {
+        "id": "homestayExperience",
+        "title": "Homestay Experience",
+        "description": "Immerse yourself in the local culture by staying with a Nepali family in a homestay. This allows you to learn about their daily life, traditions, and customs firsthand. It's a unique opportunity to forge meaningful connections and gain a deeper understanding of Nepali culture."
+      }
+    ]
+  },
+  "Shopping": {
+    "title": "Shopping in Nepal",
+    "sections": [
+      {
+        "id": "souvenirs",
+        "title": "Souvenirs",
+        "description": "Take home a piece of Nepal with unique souvenirs like handicrafts, traditional clothing, and jewelry. Explore the bustling markets of Kathmandu, Bhaktapur, and Pokhara to find a wide range of authentic Nepali products."
+      },
+      {
+        "id": "thangkaPaintings",
+        "title": "Thangka Paintings",
+        "description": "Thangka paintings are intricate Buddhist artworks that depict deities, mandalas, and religious scenes. These hand-painted masterpieces make for meaningful and culturally significant souvenirs. Look for authentic thangka paintings in art galleries and handicraft stores."
+      },
+      {
+        "id": "localMarkets",
+        "title": "Local Markets",
+        "description": "Explore the vibrant local markets of Nepal to experience the country's lively atmosphere and discover unique products. From fresh produce and spices to handmade crafts and clothing, these markets offer a glimpse into the local way of life."
+      }
+    ]
+  },
+  "SafetyHealth": {
+    "title": "Safety and Health in Nepal",
+    "sections": [
+      {
+        "id": "emergencyNumbers",
+        "title": "Emergency Numbers",
+        "description": "It's important to be aware of the emergency contact numbers in Nepal. Save the local police, ambulance, and tourist police numbers in case of any emergencies or safety concerns."
+      },
+      {
+        "id": "travelInsurance",
+        "title": "Travel Insurance",
+        "description": "Having travel insurance is highly recommended when visiting Nepal. It provides coverage for medical emergencies, trip cancellations, and other unforeseen events. Make sure to choose a policy that includes activities like trekking and adventure sports."
+      },
+      {
+        "id": "altitudeSickness",
+        "title": "Altitude Sickness",
+        "description": "Altitude sickness can be a concern when trekking in Nepal's high-altitude regions. It's important to acclimatize properly, stay hydrated, and be aware of the symptoms of altitude sickness. Descend to lower altitudes if experiencing severe symptoms."
+      },
+      {
+        "id": "healthPrecautions",
+        "title": "Health Precautions",
+        "description": "Take necessary health precautions when visiting Nepal. This includes getting vaccinated for diseases like hepatitis A, typhoid, and others as recommended by a travel health professional. It's also important to practice good hygiene and drink safe, bottled water."
+      }
+    ]
+  },
+  "MoneyMatters": {
+    "title": "Money Matters in Nepal",
+    "sections": [
+      {
+        "id": "currencyExchange",
+        "title": "Currency Exchange",
+        "description": "The official currency of Nepal is the Nepalese Rupee (NPR). Currency exchange services are available at banks, exchange counters, and authorized money changers. It's advisable to exchange currency at authorized places to ensure fair rates."
+      },
+      {
+        "id": "creditCards",
+        "title": "Credit Cards and ATMs",
+        "description": "Major credit cards like Visa and Mastercard are widely accepted in hotels, restaurants, and larger establishments in Nepal. ATMs are also available in cities and tourist areas, allowing you to withdraw cash in the local currency."
+      },
+      {
+        "id": "bargaining",
+        "title": "Bargaining",
+        "description": "Bargaining is a common practice in Nepal, especially in markets and smaller shops. Feel free to negotiate the price when buying souvenirs or other goods, but remember to do so respectfully and with a friendly attitude."
+      }
+    ]
+  },
+  "EtiquetteCustoms": {
+    "title": "Etiquette and Customs in Nepal",
+    "sections": [
+      {
+        "id": "greetings",
+        "title": "Greetings",
+        "description": "In Nepal, greetings are an important part of the culture. Use the traditional greeting \"Namaste\" with a slight bow and palms pressed together. It's a sign of respect and goodwill."
+      },
+      {
+        "id": "dressCode",
+        "title": "Dress Code",
+        "description": "When visiting religious sites and rural areas, it's advisable to dress modestly and respectfully. Avoid wearing revealing clothing and opt for conservative attire, especially for women."
+      },
+      {
+        "id": "customsAndTraditions",
+        "title": "Customs and Traditions",
+        "description": "Respect the customs and traditions of Nepal during your visit. Be mindful of local customs, such as removing your shoes before entering temples and monasteries, and seek permission before taking photographs of people or religious sites."
+      }
+    ]
+  },
+  "LanguageCommunication": {
+    "title": "Language and Communication in Nepal",
+    "sections": [
+      {
+        "id": "officialLanguage",
+        "title": "Official Language",
+        "description": "The official language of Nepal is Nepali. However, English is widely spoken, especially in tourist areas, hotels, and restaurants. Learning a few basic Nepali phrases can be helpful and appreciated by the locals."
+      },
+      {
+        "id": "localEtiquette",
+        "title": "Local Etiquette",
+        "description": "When communicating with locals, it's important to be polite and respectful. Use formal language and avoid using offensive or disrespectful words. Nepali people are known for their hospitality, so reciprocate their kindness and show gratitude."
+      },
+      {
+        "id": "translationServices",
+        "title": "Translation Services",
+        "description": "If you need assistance with language barriers, translation services are available in Nepal. You can hire professional translators or use translation apps to facilitate communication."
+      }
+    ]
+  },
+  "TravelTips": {
+    "title": "Travel Tips for Nepal",
+    "sections": [
+      {
+        "id": "seasonalConsiderations",
+        "title": "Seasonal Considerations",
+        "description": "Nepal experiences distinct seasons, each offering unique experiences. Consider the weather and climate when planning your trip. The peak tourist seasons are spring (March to May) and autumn (September to November), when the weather is pleasant and stable."
+      },
+      {
+        "id": "powerAdapters",
+        "title": "Power Adapters",
+        "description": "Nepal uses Type C and Type D power outlets. If your devices have different plug types, it's advisable to bring a universal power adapter to ensure compatibility."
+      },
+      {
+        "id": "respectingLocalCulture",
+        "title": "Respecting Local Culture",
+        "description": "Respect the local culture and traditions of Nepal. Seek permission before entering religious sites, dress modestly, and be mindful of local customs and practices. Remember to remove your shoes before entering temples and monasteries."
+      }
+    ]
   }
-  
+}

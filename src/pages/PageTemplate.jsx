@@ -10,7 +10,7 @@ import PageContent from "../PageContent";
 const { Content } = Layout;
 
 const PageTemplate = ({
-  contentComponent: ContentComponent, 
+  contentComponent: ContentComponent,
   navTitle: navItems,
 }) => {
   const toggleTheme = () => {
@@ -37,7 +37,7 @@ const PageTemplate = ({
     localStorage.setItem("theme", darkMode ? "dark" : "light");
   }, [darkMode]);
 
-// console.log("for rightsidebar", texts[navItems].sections);
+  // console.log("for rightsidebar", texts[navItems].sections);
   return (
     <Layout>
       <Layout
@@ -45,9 +45,9 @@ const PageTemplate = ({
       >
         <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
       </Layout>
-      <Layout className={`${darkMode ? "bg-[#121212]" : "bg-white"} pt-12`}>
+      <Layout className={`${darkMode ? "bg-[#121212]" : "bg-white"} `}>
         <LeftSidebar darkMode={darkMode} />
-        <Content className="pt-10">
+        <Content >
           <PageContent pagekey={navItems} darkMode={darkMode} />
         </Content>
         <RightSidebar
