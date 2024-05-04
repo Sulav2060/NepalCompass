@@ -85,11 +85,6 @@ const PageContent = ({ pagekey }) => {
               <RecommendationCard recommendation={section.recommendation} />
             </Paragraph>
           )}
-          {section.recommendation && (
-            <Paragraph className="font-bold text-gray-800 dark:text-gray-300">
-              <RecommendationCard recommendation={section.recommendation} />
-            </Paragraph>
-          )}
           {section.note && (
             <Paragraph className="italic text-gray-800 dark:text-gray-300">
               Note: {section.note}

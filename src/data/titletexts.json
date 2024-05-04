@@ -1,4 +1,6 @@
+
 {
+    "@comment": "will need to merge this with texts.json",
     "Airport": {
         "navigationItems": [
             {
@@ -39,35 +41,243 @@
             }
         ]
     },
+    "Accommodation": {
+        "navigationItems": [
+            {
+                "id": "hotels",
+                "title": "Hotels"
+            },
+            {
+                "id": "guesthouses",
+                "title": "Guesthouses"
+            },
+            {
+                "id": "homestays",
+                "title": "Homestays"
+            },
+            {
+                "id": "resorts",
+                "title": "Resorts"
+            }
+        ]
+    },
+    "FoodAndDrink": {
+        "navigationItems": [
+            {
+                "id": "restaurants",
+                "title": "Restaurants"
+            },
+            {
+                "id": "streetfood",
+                "title": "Street Food"
+            },
+            {
+                "id": "localcuisine",
+                "title": "Local Cuisine"
+            },
+            {
+                "id": "cafes",
+                "title": "Cafes"
+            }
+        ]
+    },
+    "Transportation": {
+        "navigationItems": [
+            {
+                "id": "flights",
+                "title": "Flights"
+            },
+            {
+                "id": "buses",
+                "title": "Buses"
+            },
+            {
+                "id": "taxis",
+                "title": "Taxis"
+            },
+            {
+                "id": "trains",
+                "title": "Trains"
+            }
+        ]
+    },
+    "AdventureSports": {
+        "navigationItems": [
+            {
+                "id": "trekking",
+                "title": "Trekking"
+            },
+            {
+                "id": "rafting",
+                "title": "Rafting"
+            },
+            {
+                "id": "paragliding",
+                "title": "Paragliding"
+            },
+            {
+                "id": "bungeejumping",
+                "title": "Bungee Jumping"
+            }
+        ]
+    },
+    "CulturalExperiences": {
+        "navigationItems": [
+            {
+                "id": "festivals",
+                "title": "Festivals"
+            },
+            {
+                "id": "temples",
+                "title": "Temples"
+            },
+            {
+                "id": "monasteries",
+                "title": "Monasteries"
+            },
+            {
+                "id": "traditionalarts",
+                "title": "Traditional Arts"
+            }
+        ]
+    },
     "NatureWildlife": {
         "navigationItems": [
             {
-                "id": "chitwan",
-                "title": "Chitwan National Park"
+                "id": "nationalparks",
+                "title": "National Parks"
             },
             {
-                "id": "bardia",
-                "title": "Bardia National Park"
+                "id": "wildlifesanctuaries",
+                "title": "Wildlife Sanctuaries"
             },
             {
-                "id": "uppermustang",
-                "title": "Upper Mustang"
+                "id": "birdwatching",
+                "title": "Bird Watching"
             },
             {
-                "id": "rara",
-                "title": "Rara Lake"
+                "id": "naturetrails",
+                "title": "Nature Trails"
+            }
+        ]
+    },
+    "Shopping": {
+        "navigationItems": [
+            {
+                "id": "markets",
+                "title": "Markets"
+            },
+            {
+                "id": "souvenirs",
+                "title": "Souvenirs"
+            },
+            {
+                "id": "handicrafts",
+                "title": "Handicrafts"
+            },
+            {
+                "id": "localproducts",
+                "title": "Local Products"
             }
         ]
     },
     "SafetyHealth": {
         "navigationItems": [
-            { "id": "emergency", "title": "Emergency Numbers"
+            {
+                "id": "emergency",
+                "title": "Emergency Numbers"
             },
-            { "id": "insurance", "title": "Travel Insurance"
+            {
+                "id": "insurance",
+                "title": "Travel Insurance"
             },
-            { "id": "altitude", "title": "Altitude Sickness"
+            {
+                "id": "altitude",
+                "title": "Altitude Sickness"
             },
-            { "id": "vaccinations", "title": "Vaccinations"
+            {
+                "id": "vaccinations",
+                "title": "Vaccinations"
+            }
+        ]
+    },
+    "MoneyMatters": {
+        "navigationItems": [
+            {
+                "id": "currencyexchange",
+                "title": "Currency Exchange"
+            },
+            {
+                "id": "atms",
+                "title": "ATMs"
+            },
+            {
+                "id": "creditcards",
+                "title": "Credit Cards"
+            },
+            {
+                "id": "budgeting",
+                "title": "Budgeting"
+            }
+        ]
+    },
+    "EtiquetteCustoms": {
+        "navigationItems": [
+            {
+                "id": "greetings",
+                "title": "Greetings"
+            },
+            {
+                "id": "dresscode",
+                "title": "Dress Code"
+            },
+            {
+                "id": "customs",
+                "title": "Customs"
+            },
+            {
+                "id": "taboos",
+                "title": "Taboos"
+            }
+        ]
+    },
+    "LanguageCommunication": {
+        "navigationItems": [
+            {
+                "id": "basicphrases",
+                "title": "Basic Phrases"
+            },
+            {
+                "id": "translationapps",
+                "title": "Translation Apps"
+            },
+            {
+                "id": "localdialects",
+                "title": "Local Dialects"
+            },
+            {
+                "id": "gestures",
+                "title": "Gestures"
+            }
+        ]
+    },
+    "TravelTips": {
+        "navigationItems": [
+            {
+                "id": "packing",
+                "title": "Packing Tips"
+            },
+            {
+                "id": "weather",
+                "title": "Weather"
+            },
+            {
+                "id": "safety",
+                "title": "Safety Tips"
+            },
+            {
+                "id": "itineraries",
+                "title": "Itineraries"
             }
         ]
     }

@@ -130,4 +130,414 @@
             ]
         }
     }
+    ,
+        "FoodAndDrink": {
+            "localCuisine": {
+                "dataSource": [
+                    {
+                        "key": "1",
+                        "name": "Restaurant 1",
+                        "cuisine": "Cuisine 1",
+                        "location": "Location 1"
+                    },
+                    {
+                        "key": "2",
+                        "name": "Restaurant 2",
+                        "cuisine": "Cuisine 2",
+                        "location": "Location 2"
+                    },
+                    {
+                        "key": "3",
+                        "name": "Restaurant 3",
+                        "cuisine": "Cuisine 3",
+                        "location": "Location 3"
+                    }
+                ],
+                "columns": [
+                    {
+                        "title": "Name",
+                        "dataIndex": "name",
+                        "key": "name"
+                    },
+                    {
+                        "title": "Cuisine",
+                        "dataIndex": "cuisine",
+                        "key": "cuisine"
+                    },
+                    {
+                        "title": "Location",
+                        "dataIndex": "location",
+                        "key": "location"
+                    }
+                ]
+            }
+        },
+        "Transportation": {
+            "domesticFlights": {
+                "dataSource": [
+                    {
+                        "key": "1",
+                        "mode": "Mode 1",
+                        "description": "Description 1"
+                    },
+                    {
+                        "key": "2",
+                        "mode": "Mode 2",
+                        "description": "Description 2"
+                    },
+                    {
+                        "key": "3",
+                        "mode": "Mode 3",
+                        "description": "Description 3"
+                    }
+                ],
+                "columns": [
+                    {
+                        "title": "Mode",
+                        "dataIndex": "mode",
+                        "key": "mode"
+                    },
+                    {
+                        "title": "Description",
+                        "dataIndex": "description",
+                        "key": "description"
+                    }
+                ]
+            }
+        },
+        "AdventureSports": {
+            "whiteWaterRafting": {
+                "dataSource": [
+                    {
+                        "key": "1",
+                        "name": "Activity 1",
+                        "location": "Location 1",
+                        "cost": "Cost 1"
+                    },
+                    {
+                        "key": "2",
+                        "name": "Activity 2",
+                        "location": "Location 2",
+                        "cost": "Cost 2"
+                    },
+                    {
+                        "key": "3",
+                        "name": "Activity 3",
+                        "location": "Location 3",
+                        "cost": "Cost 3"
+                    }
+                ],
+                "columns": [
+                    {
+                        "title": "Name",
+                        "dataIndex": "name",
+                        "key": "name"
+                    },
+                    {
+                        "title": "Location",
+                        "dataIndex": "location",
+                        "key": "location"
+                    },
+                    {
+                        "title": "Cost",
+                        "dataIndex": "cost",
+                        "key": "cost"
+                    }
+                ]
+            }
+        },
+        "CulturalExperiences": {
+            "festivals": {
+                "dataSource": [
+                    {
+                        "key": "1",
+                        "name": "Festival 1",
+                        "date": "Date 1",
+                        "location": "Location 1"
+                    },
+                    {
+                        "key": "2",
+                        "name": "Festival 2",
+                        "date": "Date 2",
+                        "location": "Location 2"
+                    },
+                    {
+                        "key": "3",
+                        "name": "Festival 3",
+                        "date": "Date 3",
+                        "location": "Location 3"
+                    }
+                ],
+                "columns": [
+                    {
+                        "title": "Name",
+                        "dataIndex": "name",
+                        "key": "name"
+                    },
+                    {
+                        "title": "Date",
+                        "dataIndex": "date",
+                        "key": "date"
+                    },
+                    {
+                        "title": "Location",
+                        "dataIndex": "location",
+                        "key": "location"
+                    }
+                ]
+            },
+            "heritageSites": {
+                "dataSource": [
+                    {
+                        "key": "1",
+                        "name": "Heritage Site 1",
+                        "location": "Location 1",
+                        "description": "Description 1"
+                    },
+                    {
+                        "key": "2",
+                        "name": "Heritage Site 2",
+                        "location": "Location 2",
+                        "description": "Description 2"
+                    },
+                    {
+                        "key": "3",
+                        "name": "Heritage Site 3",
+                        "location": "Location 3",
+                        "description": "Description 3"
+                    }
+                ],
+                "columns": [
+                    {
+                        "title": "Name",
+                        "dataIndex": "name",
+                        "key": "name"
+                    },
+                    {
+                        "title": "Location",
+                        "dataIndex": "location",
+                        "key": "location"
+                    },
+                    {
+                        "title": "Description",
+                        "dataIndex": "description",
+                        "key": "description"
+                    }
+                ]
+            }
+        },
+        "NatureWildlife": {
+            "nationalParks": {
+                "dataSource": [
+                    {
+                        "key": "1",
+                        "name": "National Park 1",
+                        "location": "Location 1",
+                        "description": "Description 1"
+                    },
+                    {
+                        "key": "2",
+                        "name": "National Park 2",
+                        "location": "Location 2",
+                        "description": "Description 2"
+                    },
+                    {
+                        "key": "3",
+                        "name": "National Park 3",
+                        "location": "Location 3",
+                        "description": "Description 3"
+                    }
+                ],
+                "columns": [
+                    {
+                        "title": "Name",
+                        "dataIndex": "name",
+                        "key": "name"
+                    },
+                    {
+                        "title": "Location",
+                        "dataIndex": "location",
+                        "key": "location"
+                    },
+                    {
+                        "title": "Description",
+                        "dataIndex": "description",
+                        "key": "description"
+                    }
+                ]
+            }
+        },
+        "Shopping": {
+            "thangkaPaintings": {
+                "dataSource": [
+                    {
+                        "key": "1",
+                        "name": "Market 1",
+                        "location": "Location 1",
+                        "hours": "Hours 1"
+                    },
+                    {
+                        "key": "2",
+                        "name": "Market 2",
+                        "location": "Location 2",
+                        "hours": "Hours 2"
+                    },
+                    {
+                        "key": "3",
+                        "name": "Market 3",
+                        "location": "Location 3",
+                        "hours": "Hours 3"
+                    }
+                ],
+                "columns": [
+                    {
+                        "title": "Name",
+                        "dataIndex": "name",
+                        "key": "name"
+                    },
+                    {
+                        "title": "Location",
+                        "dataIndex": "location",
+                        "key": "location"
+                    },
+                    {
+                        "title": "Hours",
+                        "dataIndex": "hours",
+                        "key": "hours"
+                    }
+                ]
+            }
+        },
+        "MoneyMatters": {
+            "currencyExchange": {
+                "dataSource": [
+                    {
+                        "key": "1",
+                        "name": "Currency 1",
+                        "code": "Code 1",
+                        "symbol": "Symbol 1"
+                    },
+                    {
+                        "key": "2",
+                        "name": "Currency 2",
+                        "code": "Code 2",
+                        "symbol": "Symbol 2"
+                    },
+                    {
+                        "key": "3",
+                        "name": "Currency 3",
+                        "code": "Code 3",
+                        "symbol": "Symbol 3"
+                    }
+                ],
+                "columns": [
+                    {
+                        "title": "Name",
+                        "dataIndex": "name",
+                        "key": "name"
+                    },
+                    {
+                        "title": "Code",
+                        "dataIndex": "code",
+                        "key": "code"
+                    },
+                    {
+                        "title": "Symbol",
+                        "dataIndex": "symbol",
+                        "key": "symbol"
+                    }
+                ]
+            }
+        },
+        "EtiquetteCustoms": {
+            "greetings": {
+                "dataSource": [
+                    {
+                        "key": "1",
+                        "name": "Custom 1",
+                        "description": "Description 1"
+                    },
+                    {
+                        "key": "2",
+                        "name": "Custom 2",
+                        "description": "Description 2"
+                    },
+                    {
+                        "key": "3",
+                        "name": "Custom 3",
+                        "description": "Description 3"
+                    }
+                ],
+                "columns": [
+                    {
+                        "title": "Name",
+                        "dataIndex": "name",
+                        "key": "name"
+                    },
+                    {
+                        "title": "Description",
+                        "dataIndex": "description",
+                        "key": "description"
+                    }
+                ]
+            }
+        },
+        "LanguageCommunication": {
+            "translationServices": {
+                "dataSource": [
+                    {
+                        "key": "1",
+                        "phrase": "Phrase 1",
+                        "translation": "Translation 1"
+                    },
+                    {
+                        "key": "2",
+                        "phrase": "Phrase 2",
+                        "translation": "Translation 2"
+                    },
+                    {
+                        "key": "3",
+                        "phrase": "Phrase 3",
+                        "translation": "Translation 3"
+                    }
+                ],
+                "columns": [
+                    {
+                        "title": "Phrase",
+                        "dataIndex": "phrase",
+                        "key": "phrase"
+                    },
+                    {
+                        "title": "Translation",
+                        "dataIndex": "translation",
+                        "key": "translation"
+                    }
+                ]
+            }
+        },
+        "TravelTips": {
+            "seasonalConsiderations": {
+                "dataSource": [
+                    {
+                        "key": "1",
+                        "tip": "Tip 1"
+                    },
+                    {
+                        "key": "2",
+                        "tip": "Tip 2"
+                    },
+                    {
+                        "key": "3",
+                        "tip": "Tip 3"
+                    }
+                ],
+                "columns": [
+                    {
+                        "title": "Tip",
+                        "dataIndex": "tip",
+                        "key": "tip"
+                    }
+                ]
+            }
+        }
 }

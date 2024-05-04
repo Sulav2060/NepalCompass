@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { Layout, Menu, Drawer, Button } from "antd";
 import {
   FolderOutlined,
@@ -14,7 +14,7 @@ const { SubMenu } = Menu;
 const LeftSidebar = ({ darkMode }) => {
   const [visible, setVisible] = useState(false);
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const items = [
+  const items = useMemo(() => [
     {
       label: "Welcome to Nepal",
       key: "arriving",
@@ -60,7 +60,7 @@ const LeftSidebar = ({ darkMode }) => {
         { label: "Travel Tips and Resources", key: "travel_tips" },
       ],
     },
-  ];
+  ], []);
 
   const renderMenuItem = (item) => {
     if (item.children) {
@@ -97,6 +97,8 @@ const LeftSidebar = ({ darkMode }) => {
     setVisible(false);
   };
 
+  const defaultSelectedKey = useMemo(() => items.length > 0 ? items[0].key : null, [items]);
+
   return isMobile ? (
     <div>
       <Button type="primary" onClick={showDrawer} icon={<MenuOutlined />}>
@@ -110,7 +112,7 @@ const LeftSidebar = ({ darkMode }) => {
         visible={visible}
       >
         <Menu
-          defaultSelectedKeys={["1"]}
+          defaultSelectedKeys={[defaultSelectedKey]}
           mode="inline"
           theme={darkMode ? "dark" : "light"} // Dark mode theme
           defaultOpenKeys={[
@@ -140,6 +142,7 @@ const LeftSidebar = ({ darkMode }) => {
       theme={darkMode ? "dark" : "light"} // Dark mode theme
     >
       <Menu
+        defaultSelectedKeys={[defaultSelectedKey]}
         mode="inline"
         style={{
           position: "sticky",
