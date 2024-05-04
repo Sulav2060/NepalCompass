@@ -20,11 +20,11 @@ const PageContent = ({ pagekey }) => {
   const renderTable = (section) => {
     const tableConfig = tableData[pagekey]?.[section.id];
     if (tableConfig && tableConfig.dataSource && tableConfig.columns) {
-      console.log("pagekey:", pagekey);
-      console.log("Section ID:", section.id);
-      console.log("tableConfig:", tableConfig);
-      console.log("Table Data source:", tableConfig.dataSource);
-      console.log("Table Data columns:", tableConfig.columns);
+      // console.log("pagekey:", pagekey);
+      // console.log("Section ID:", section.id);
+      // console.log("tableConfig:", tableConfig);
+      // console.log("Table Data source:", tableConfig.dataSource);
+      // console.log("Table Data columns:", tableConfig.columns);
 
       return {
         dataSource: tableConfig.dataSource,

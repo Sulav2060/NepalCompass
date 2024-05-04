@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import RightSidebar from "../components/RightSidebar";
 import LeftSidebar from "../components/LeftSidebar";
 import Navbar from "../components/Navbar";
-import titletexts from "../data/titletexts.json";
+import texts from "../data/texts.json";
 import { Layout } from "antd";
 import { useEffect } from "react";
 import PageContent from "../PageContent";
@@ -10,7 +10,7 @@ import PageContent from "../PageContent";
 const { Content } = Layout;
 
 const PageTemplate = ({
-  contentComponent: ContentComponent,
+  contentComponent: ContentComponent, 
   navTitle: navItems,
 }) => {
   const toggleTheme = () => {
@@ -37,6 +37,7 @@ const PageTemplate = ({
     localStorage.setItem("theme", darkMode ? "dark" : "light");
   }, [darkMode]);
 
+// console.log("for rightsidebar", texts[navItems].sections);
   return (
     <Layout>
       <Layout
@@ -50,7 +51,7 @@ const PageTemplate = ({
           <PageContent pagekey={navItems} darkMode={darkMode} />
         </Content>
         <RightSidebar
-          navigationItems={titletexts[navItems]?.navigationItems}
+          navigationItems={texts[navItems].sections}
           darkMode={darkMode}
         />
       </Layout>

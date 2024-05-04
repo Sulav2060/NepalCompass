@@ -5,7 +5,7 @@ const Table = ({ data }) => {
     return <div>Table Could not be loaded. please refresh.</div>;
   }
   const { columns, dataSource } = data;
-  console.log("Data received by table.jsx:", data);
+  // console.log("Data received by table.jsx:", data);
   return (
     <div className="overflow-x-auto dark:text-gray-300">
       <table className="w-full table-auto border-collapse dark:border-gray-700">
