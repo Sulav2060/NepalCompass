@@ -11,63 +11,69 @@ import { useMediaQuery } from "react-responsive";
 const { Sider } = Layout;
 const { SubMenu } = Menu;
 
-const LeftSidebar = ({ darkMode }) => {
+const LeftSidebar = ({ darkMode, city }) => {
   const [visible, setVisible] = useState(false);
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const items = useMemo(
     () => [
       {
         label: "Welcome to Nepal",
-        key: "arriving",
+        key: "arriving1",
       },
       {
         label: "Getting Started",
         key: "getting_started",
         children: [
-          { label: "Arriving in Nepal", key: "arriving" },
-          { label: "Accommodation", key: "accommodation" },
+          { label: "Arriving in Nepal", key: `${city}/arriving` },
+          { label: "Accommodation", key: `${city}/accommodation ` },
         ],
       },
       {
         label: "Food and Drink",
-        key: "food_and_drink",
+        key: `${city}/food_and_drink`,
       },
       {
         label: "Transportation",
-        key: "transportation",
+        key: `${city}/transportation`,
       },
       {
         label: "Sightseeing and Activities",
         key: "sightseeing_activities",
         children: [
-          { label: "Trekking", key: "trekking" },
-          { label: "Adventure Sports", key: "adventure_sports" },
-          { label: "Cultural Experiences", key: "cultural_experiences" },
-          { label: "Nature and Wildlife", key: "nature_wildlife" },
+          { label: "Trekking", key: `${city}/trekking` },
+          { label: "Adventure Sports", key: `${city}/adventure_sports` },
+          {
+            label: "Cultural Experiences",
+            key: `${city}/cultural_experiences`,
+          },
+          { label: "Nature and Wildlife", key: `${city}/nature_wildlife` },
         ],
       },
       {
         label: "Shopping",
-        key: "shopping",
+        key: `${city}/shopping`,
       },
       {
         label: "Practical Information",
         key: "practical_info",
         children: [
-          { label: "Safety and Health", key: "safety_health" },
-          { label: "Money Matters", key: "money_matters" },
-          { label: "Local Etiquette and Customs", key: "etiquette_customs" },
+          { label: "Safety and Health", key: `${city}/safety_health` },
+          { label: "Money Matters", key: `${city}/money_matters` },
+          {
+            label: "Local Etiquette and Customs",
+            key: `${city}/etiquette_customs`,
+          },
           {
             label: "Language and Communication",
-            key: "language_communication",
+            key: `${city}/language_communication`,
           },
-          { label: "Travel Tips and Resources", key: "travel_tips" },
+          { label: "Travel Tips and Resources", key: `${city}/travel_tips` },
         ],
       },
     ],
     []
   );
-
+  console.log("city in leftsidebar", city);
   const renderMenuItem = (item) => {
     if (item.children) {
       return (

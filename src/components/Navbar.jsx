@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Button, Layout, Menu, Switch } from "antd";
+import { Button, Layout, Menu, Switch, Dropdown, message, Space } from "antd";
 import {
   MenuOutlined,
   CloseOutlined,
   SunOutlined,
   MoonOutlined,
+  DownOutlined,
 } from "@ant-design/icons";
 import { useMediaQuery } from "react-responsive";
 
@@ -49,7 +50,25 @@ const Navbar = ({ darkMode, toggleTheme }) => {
   const handleThemeChangeComplete = () => {
     setThemeChangeClicked(false);
   };
-
+  const items = [
+    {
+      label: "Kathmandu",
+      key: "ktm",
+    },
+    {
+      label: "Pokhara",
+      key: "pkr",
+    },
+    {
+      label: "3rd menu item",
+      key: "3",
+    },
+  ];
+  const onClick = ({ key, label }) => {
+    message.info(`changed to ${label}`);
+    window.location.href = `/${key}`;
+    console.log("href", window.location.href);
+  };
   return (
     <Header
       style={{
@@ -61,7 +80,9 @@ const Navbar = ({ darkMode, toggleTheme }) => {
         color: darkMode ? "#ffffff" : "#000000", // Updated dark mode text color
       }}
     >
+      
       <div className="container mx-auto flex justify-between items-center">
+      
         <div className="flex items-center">
           <button
             className={`text-2xl font-bold ${
@@ -99,12 +120,20 @@ const Navbar = ({ darkMode, toggleTheme }) => {
             <a href="#" className={`hover:text-blue-500`}>
               Suraj
             </a>
-            <a href="#" className={`hover:text-blue-500`}>
-              GithubLink
-            </a>
-            <a href="#" className={`hover:text-blue-500`}>
-              ToBeDetermined
-            </a>
+            <Dropdown
+              menu={{
+                items,
+                onClick,
+              }}
+            >
+              <a onClick={(e) => e.preventDefault() }>
+                <Space>
+                  Cities
+                  <DownOutlined />
+                </Space>
+              </a>
+            </Dropdown>
+            
           </div>
         )}
 

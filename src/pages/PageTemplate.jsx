@@ -12,11 +12,13 @@ const { Content } = Layout;
 const PageTemplate = ({
   contentComponent: ContentComponent,
   navTitle: navItems,
+  city,
+  path,
 }) => {
   const toggleTheme = () => {
     setDarkMode(!darkMode);
   };
-
+console.log("city in pagetemplate", city);
   function getInitialDarkModePreference() {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -37,7 +39,7 @@ const PageTemplate = ({
     localStorage.setItem("theme", darkMode ? "dark" : "light");
   }, [darkMode]);
 
-  // console.log("for rightsidebar", texts[navItems].sections);
+  console.log("for rightsidebar", texts[navItems].sections);
   return (
     <Layout>
       <Layout
@@ -46,13 +48,15 @@ const PageTemplate = ({
         <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
       </Layout>
       <Layout className={`${darkMode ? "bg-[#121212]" : "bg-white"} `}>
-        <LeftSidebar darkMode={darkMode} />
+        <LeftSidebar darkMode={darkMode} city={city} />
         <Content >
           <PageContent pagekey={navItems} darkMode={darkMode} />
         </Content>
         <RightSidebar
           navigationItems={texts[navItems].sections}
           darkMode={darkMode}
+          city={city}
+          page={path}
         />
       </Layout>
     </Layout>
