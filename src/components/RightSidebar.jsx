@@ -3,7 +3,7 @@ import { Drawer, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import { useMediaQuery } from "react-responsive";
 
-const RightSidebar = ({ navigationItems, darkMode,city, page }) => {
+const RightSidebar = ({ navigationItems, darkMode, city, page }) => {
   const [activeItems, setActiveItems] = useState([]);
   const [visible, setVisible] = useState(false);
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -11,7 +11,6 @@ const RightSidebar = ({ navigationItems, darkMode,city, page }) => {
   useEffect(() => {
     const handleScroll = () => {
       const visibleItems = [];
-
       navigationItems.forEach((item) => {
         const sectionId = `section-${item.id}`;
         const element = document.getElementById(sectionId);
@@ -83,7 +82,6 @@ const RightSidebar = ({ navigationItems, darkMode,city, page }) => {
             >
               <a href={`/${city}/#${item.id}`} className="sidebar-link">
                 {item.title}
-                
               </a>
             </li>
           ))}
@@ -112,11 +110,11 @@ const RightSidebar = ({ navigationItems, darkMode,city, page }) => {
             }`}
             style={{ cursor: "pointer" }}
           >
-            <a href={`/${city}/${page}#${item.id}` } className="sidebar-link " 
-            // onClick={(e) => e.preventDefault()}
+            <a
+              href={`/${city}/${page}#${item.id}`}
+              className="sidebar-link"
             >
               {item.title}
-              {console.log(`${page}`)}
             </a>
           </li>
         ))}

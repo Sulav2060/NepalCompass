@@ -3,32 +3,35 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import PageTemplate from "./pages/PageTemplate";
 import PageContent from "./PageContent";
-import { message } from "antd";
+import useFetch from "./Hooks/useFetch.js"
 
 const cities = ["ktm", "pkr"];
 
 const routes = [
-  { path: "", pagekey: "Airport" },
-  { path: "arriving", pagekey: "Airport" },
-  { path: "Accommodation", pagekey: "Accommodation" },
+  { path: "", pagekey: "airport" },
+  { path: "arriving", pagekey: "arriving" },
+  { path: "accommodation", pagekey: "accommodation" },
   { path: "food_and_drink", pagekey: "FoodAndDrink" },
   { path: "transportation", pagekey: "Transportation" },
-  { path: "trekking", pagekey: "Trekking" },
-  { path: "adventure_sports", pagekey: "AdventureSports" },
-  { path: "cultural_experiences", pagekey: "CulturalExperiences" },
-  { path: "nature_wildlife", pagekey: "NatureWildlife" },
-  { path: "shopping", pagekey: "Shopping" },
-  { path: "safety_health", pagekey: "SafetyHealth" },
-  { path: "money_matters", pagekey: "MoneyMatters" },
-  { path: "etiquette_customs", pagekey: "EtiquetteCustoms" },
-  { path: "language_communication", pagekey: "LanguageCommunication" },
-  { path: "travel_tips", pagekey: "TravelTips" },
+  { path: "trekking", pagekey: "trekking" },
+  { path: "adventure_sports", pagekey: "adventureSports" },
+  { path: "cultural_experiences", pagekey: "naulturalExperiences" },
+  { path: "nature_wildlife", pagekey: "aatureWildlife" },
+  { path: "shopping", pagekey: "ahopping" },
+  { path: "safety_health", pagekey: "safetyHealth" },
+  { path: "money_matters", pagekey: "moneyMatters" },
+  { path: "etiquette_customs", pagekey: "etiquetteCustoms" },
+  { path: "language_communication", pagekey: "languageCommunication" },
+  { path: "travel_tips", pagekey: "travelTips" },
 ];
+
 function App() {
+  // const { data, error, loading } = useFetch("http://localhost:1337/api/reviews");
+
+  // console.log("data", data);
+
   return (
     <Router>
-      {/* {message.info(`Currently in ${routes.pagekey}`) } */}
-
       <div>
         <Suspense>
           <Routes>

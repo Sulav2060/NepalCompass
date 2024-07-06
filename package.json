@@ -15,7 +15,7 @@
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.8.2",
     "react-responsive": "^10.0.0",
-    "react-router-dom": "^6.22.3",
+    "react-router-dom": "^6.24.1",
     "routes": "^2.1.0",
     "switch": "^0.0.0"
   },

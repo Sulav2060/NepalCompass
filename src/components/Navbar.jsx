@@ -65,9 +65,13 @@ const Navbar = ({ darkMode, toggleTheme }) => {
     },
   ];
   const onClick = ({ key, label }) => {
-    message.info(`changed to ${label}`);
-    window.location.href = `/${key}`;
-    console.log("href", window.location.href);
+    message.info(`Changed to ${label}`);
+    const currentPath = window.location.pathname.split('/');
+    const currentCity = currentPath[1]; // Get current city from the URL
+    const newPath = `/${key}/${currentPath.slice(2).join('/')}`; // Construct new path with the selected city
+    if (currentCity !== key) {
+      window.location.href = newPath;
+    }
   };
   return (
     <Header
